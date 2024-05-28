@@ -73,6 +73,7 @@ internal class Game {
         _scene = LevelScene.FromJson(levelJson);
 
         _scene.SetWindowSizes((ivec2)_window.Size, new(2f, 2f));
+        _scene.Init(_window);
         _scene.OnEnter();
 
         Time.Start();
@@ -95,6 +96,7 @@ internal class Game {
     }
 
     public void Close () {
+        _scene.Dispatch(_window);
         _window.Close();
     }
 
@@ -123,6 +125,7 @@ internal class Game {
         _window.Closed += (sender, evt) => ((RenderWindow?)sender)?.Close();
 
         _window.KeyPressed += HandleKeyPressed;
+        //_window.KeyPressed += HandleSceneKeyEvents;
     }
 
     private void HandleKeyPressed (object? sender, KeyEventArgs evt) {
@@ -165,6 +168,12 @@ internal class Game {
                 Time.SetTimeScale(1f);
             }
         }
+
+        HandleSceneKeyEvents(sender, evt);
+    }
+
+    private void HandleSceneKeyEvents (object? sender, KeyEventArgs evt) {
+        _scene.OnEvent(evt);
     }
 
     private void SetupDebugInfo () {

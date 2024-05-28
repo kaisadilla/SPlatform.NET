@@ -1,6 +1,7 @@
 ﻿using SFML.Audio;
 using SFML.Graphics;
 using SFML.System;
+using SFML.Window;
 using splatform.player;
 using splatform.tiles;
 using System;
@@ -50,8 +51,13 @@ internal partial class LevelScene : Scene {
         (int)(WindowSize.Y / WindowZoom.Y)
     );
 
-    public override void OnEnter () {
+    public override void Init (RenderWindow window) {
+        InitializeBackground();
+
         _camera = new(new(PixelWidth, PixelHeight), ViewSize);
+    }
+
+    public override void OnEnter () {
 
         foreach (var tile in _backgroundLayer) {
             tile.OnStart();
@@ -59,14 +65,26 @@ internal partial class LevelScene : Scene {
         foreach (var tile in _foregroundLayer) {
             tile.OnStart();
         }
-
-        InitializeBackground();
     }
 
     public override void OnUpdate () {
         _camera.UpdatePosition(__temp_playerPos);
 
         UpdateBackgroundPosition();
+
+        // TODO: Remove
+        if (Keyboard.IsKeyPressed(Keyboard.Key.A)) {
+            __temp_playerPos.X -= 1;
+        }
+        if (Keyboard.IsKeyPressed(Keyboard.Key.D)) {
+            __temp_playerPos.X += 1;
+        }
+        if (Keyboard.IsKeyPressed(Keyboard.Key.W)) {
+            __temp_playerPos.Y -= 1;
+        }
+        if (Keyboard.IsKeyPressed(Keyboard.Key.S)) {
+            __temp_playerPos.Y += 1;
+        }
     }
 
     public override void OnFixedUpdate () {
@@ -85,6 +103,14 @@ internal partial class LevelScene : Scene {
         DrawLayer(window, _foregroundLayer);
 
         window.SetView(window.DefaultView);
+    }
+
+    public override void OnEvent (KeyEventArgs evt) {
+
+    }
+
+    public override void Dispatch (RenderWindow window) {
+
     }
 
     private void LoadBackground (string name) {

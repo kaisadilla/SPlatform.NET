@@ -11,6 +11,7 @@
   <ItemGroup>
     <PackageReference Include="Betwixt_x64" Version="1.3.3" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Retromono.Tweens" Version="1.0.1" />
     <PackageReference Include="SFML.Net" Version="2.5.1" />
   </ItemGroup>
 
