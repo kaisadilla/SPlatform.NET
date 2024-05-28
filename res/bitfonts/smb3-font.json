@@ -1,0 +1,157 @@
+{
+    "fontName": "Super Mario Bros. 3",
+    "spritesheet": "smb3",
+    "spritesheetDimensions": [12, 3],
+    "cellDimensions": [10, 10],
+    "cellOffset": [1, 1, 1, 1],
+    "spacing": [0, 0],
+    "spaceLength": 6,
+    "characters": [
+        {
+            "character": "0",
+            "index": 0
+        },
+        {
+            "character": "1",
+            "index": 1,
+            "offset": [2, 1, 2, 1]
+        },
+        {
+            "character": "2",
+            "index": 2
+        },
+        {
+            "character": "3",
+            "index": 3
+        },
+        {
+            "character": "4",
+            "index": 4
+        },
+        {
+            "character": "5",
+            "index": 5
+        },
+        {
+            "character": "6",
+            "index": 6
+        },
+        {
+            "character": "7",
+            "index": 7
+        },
+        {
+            "character": "8",
+            "index": 8
+        },
+        {
+            "character": "9",
+            "index": 9
+        },
+        {
+            "character": "A",
+            "index": 10
+        },
+        {
+            "character": "B",
+            "index": 11
+        },
+        {
+            "character": "C",
+            "index": 12
+        },
+        {
+            "character": "D",
+            "index": 13
+        },
+        {
+            "character": "E",
+            "index": 14
+        },
+        {
+            "character": "F",
+            "index": 15
+        },
+        {
+            "character": "G",
+            "index": 16
+        },
+        {
+            "character": "H",
+            "index": 17
+        },
+        {
+            "character": "I",
+            "index": 18,
+            "offset": [2, 1, 4, 1]
+        },
+        {
+            "character": "J",
+            "index": 19
+        },
+        {
+            "character": "K",
+            "index": 20
+        },
+        {
+            "character": "L",
+            "index": 21
+        },
+        {
+            "character": "M",
+            "index": 22
+        },
+        {
+            "character": "N",
+            "index": 23
+        },
+        {
+            "character": "O",
+            "index": 24
+        },
+        {
+            "character": "P",
+            "index": 25
+        },
+        {
+            "character": "Q",
+            "index": 26
+        },
+        {
+            "character": "R",
+            "index": 27
+        },
+        {
+            "character": "S",
+            "index": 28
+        },
+        {
+            "character": "T",
+            "index": 29
+        },
+        {
+            "character": "U",
+            "index": 30
+        },
+        {
+            "character": "V",
+            "index": 31
+        },
+        {
+            "character": "W",
+            "index": 32
+        },
+        {
+            "character": "X",
+            "index": 33
+        },
+        {
+            "character": "Y",
+            "index": 34
+        },
+        {
+            "character": "Z",
+            "index": 35
+        }
+    ]
+}

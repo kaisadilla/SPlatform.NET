@@ -1,0 +1,4048 @@
+[
+    {
+        "internalName": "ground_wooden",
+        "displayName": "Wooden ground",
+        "sprite": "ground_wooden",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_wooden_left",
+        "displayName": "Wooden ground (left)",
+        "sprite": "ground_wooden_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_wooden_right",
+        "displayName": "Wooden ground (right)",
+        "sprite": "ground_wooden_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_wooden_top",
+        "displayName": "Wooden ground (top)",
+        "sprite": "ground_wooden_top",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_wooden_top_left",
+        "displayName": "Wooden ground (top left)",
+        "sprite": "ground_wooden_top_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_wooden_top_right",
+        "displayName": "Wooden ground (top right)",
+        "sprite": "ground_wooden_top_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "block_question",
+        "displayName": "Question block",
+        "sprite": "block_question",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "block_wooden",
+        "displayName": "Wooden block",
+        "sprite": "block_wooden",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "block_cloud",
+        "displayName": "Cloud block",
+        "sprite": "block_cloud",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "block_brick",
+        "displayName": "Brick block",
+        "sprite": "block_brick",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "pipe_vertical_green_notch_left",
+        "displayName": "Vertical pipe (green, notch, left)",
+        "sprite": "pipe_vertical_green_notch_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_vertical_green_notch_right",
+        "displayName": "Vertical pipe (green, notch, right)",
+        "sprite": "pipe_vertical_green_notch_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_vertical_green_left",
+        "displayName": "Vertical pipe (green, left)",
+        "sprite": "pipe_vertical_green_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_vertical_green_right",
+        "displayName": "Vertical pipe (green, right)",
+        "sprite": "pipe_vertical_green_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "block_hollow",
+        "displayName": "Hollow block",
+        "sprite": "block_hollow",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "block_brick_unbreakable",
+        "displayName": "Unbreakable brick block",
+        "sprite": "block_brick_unbreakable",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "block_donut",
+        "displayName": "Donut block",
+        "sprite": "block_donut",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "block_empty",
+        "displayName": "Empty block",
+        "sprite": "block_empty",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "block_ice_bottom_left",
+        "displayName": "Ice block (bottom left)",
+        "sprite": "block_ice_bottom_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "block_ice_bottom_right",
+        "displayName": "Ice block (bottom right)",
+        "sprite": "block_ice_bottom_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "block_ice_small",
+        "displayName": "Ice block (small)",
+        "sprite": "block_ice_small",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "block_ice_top_left",
+        "displayName": "Ice block (top left)",
+        "sprite": "block_ice_top_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "block_ice_top_right",
+        "displayName": "Ice block (top right)",
+        "sprite": "block_ice_top_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "block_metal_azure",
+        "displayName": "Metal block (azure)",
+        "sprite": "block_metal_azure",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "block_metal_black",
+        "displayName": "Metal block (black)",
+        "sprite": "block_metal_black",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "block_metal_blue",
+        "displayName": "Metal block (blue)",
+        "sprite": "block_metal_blue",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "block_movable",
+        "displayName": "Movable block",
+        "sprite": "block_movable",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "block_music",
+        "displayName": "Music block",
+        "sprite": "block_music",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "block_music_bonus",
+        "displayName": "Music block (bonus)",
+        "sprite": "block_music_bonus",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "block_small_castle_final",
+        "displayName": "Small castle's final block",
+        "sprite": "block_small_castle_final",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "block_water_donut",
+        "displayName": "Water donut block",
+        "sprite": "block_water_donut",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "bridge",
+        "displayName": "Bridge",
+        "sprite": "bridge",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "bridge_hook",
+        "displayName": "Bridge hook",
+        "sprite": "bridge_hook",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "bridge_suspension",
+        "displayName": "Bridge suspension",
+        "sprite": "bridge_suspension",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "bush",
+        "displayName": "Bush",
+        "sprite": "bush",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "background"
+        ]
+    },
+    {
+        "internalName": "bush_dark",
+        "displayName": "Dark bush",
+        "sprite": "bush_dark",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "background"
+        ]
+    },
+    {
+        "internalName": "bush_dark_left",
+        "displayName": "Dark bush (left)",
+        "sprite": "bush_dark_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "background"
+        ]
+    },
+    {
+        "internalName": "bush_dark_right",
+        "displayName": "Dark bush (right)",
+        "sprite": "bush_dark_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "background"
+        ]
+    },
+    {
+        "internalName": "bush_dark_top_left",
+        "displayName": "Dark bush (top left)",
+        "sprite": "bush_dark_top_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "background"
+        ]
+    },
+    {
+        "internalName": "bush_dark_top_left_covered",
+        "displayName": "Dark bush (top left, covered)",
+        "sprite": "bush_dark_top_left_covered",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "background"
+        ]
+    },
+    {
+        "internalName": "bush_dark_top_right",
+        "displayName": "Dark bush (top right)",
+        "sprite": "bush_dark_top_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "background"
+        ]
+    },
+    {
+        "internalName": "bush_dark_top_right_covered",
+        "displayName": "Dark bush (top right, covered)",
+        "sprite": "bush_dark_top_right_covered",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "background"
+        ]
+    },
+    {
+        "internalName": "bush_left",
+        "displayName": "Bush (left)",
+        "sprite": "bush_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "background"
+        ]
+    },
+    {
+        "internalName": "bush_right",
+        "displayName": "Bush (right)",
+        "sprite": "bush_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "background"
+        ]
+    },
+    {
+        "internalName": "bush_small",
+        "displayName": "Small bush",
+        "sprite": "bush_small",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "background"
+        ]
+    },
+    {
+        "internalName": "bush_top_left",
+        "displayName": "Bush (top left)",
+        "sprite": "bush_top_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "background"
+        ]
+    },
+    {
+        "internalName": "bush_top_left_covered",
+        "displayName": "Bush (top left, covered)",
+        "sprite": "bush_top_left_covered",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "background"
+        ]
+    },
+    {
+        "internalName": "bush_top_right",
+        "displayName": "Bush (top right)",
+        "sprite": "bush_top_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "background"
+        ]
+    },
+    {
+        "internalName": "bush_top_right_covered",
+        "displayName": "Bush (top right, covered)",
+        "sprite": "bush_top_right_covered",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "background"
+        ]
+    },
+    {
+        "internalName": "cloud_0",
+        "displayName": "Cloud",
+        "sprite": "cloud_0",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "cloud_0_left",
+        "displayName": "Cloud (left)",
+        "sprite": "cloud_0_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "cloud_0_right",
+        "displayName": "Cloud (right)",
+        "sprite": "cloud_0_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "cloud_1",
+        "displayName": "Cloud 1",
+        "sprite": "cloud_1",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "cloud_1_left",
+        "displayName": "Cloud 1 (left)",
+        "sprite": "cloud_1_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "cloud_1_right",
+        "displayName": "Cloud 1 (right)",
+        "sprite": "cloud_1_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "cloud_2_bottom_0",
+        "displayName": "Big cloud (bottom)",
+        "sprite": "cloud_2_bottom_0",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "cloud_2_bottom_1",
+        "displayName": "Big cloud (bottom 1)",
+        "sprite": "cloud_2_bottom_1",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "cloud_2_bottom_2",
+        "displayName": "Big cloud (bottom 2)",
+        "sprite": "cloud_2_bottom_2",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "cloud_2_bottom_left",
+        "displayName": "Big cloud (bottom left)",
+        "sprite": "cloud_2_bottom_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "cloud_2_bottom_right",
+        "displayName": "Big cloud (bottom right)",
+        "sprite": "cloud_2_bottom_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "cloud_2_top_0",
+        "displayName": "Big cloud (top)",
+        "sprite": "cloud_2_top_0",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "cloud_2_top_1",
+        "displayName": "Big cloud (top 1)",
+        "sprite": "cloud_2_top_1",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "cloud_2_top_2",
+        "displayName": "Big cloud (top 2)",
+        "sprite": "cloud_2_top_2",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "cloud_2_top_left",
+        "displayName": "Big cloud (top left)",
+        "sprite": "cloud_2_top_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "cloud_2_top_right",
+        "displayName": "Big cloud (top right)",
+        "sprite": "cloud_2_top_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "cloud_3_bottom",
+        "displayName": "Big cloud 1 (bottom)",
+        "sprite": "cloud_3_bottom",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "cloud_3_bottom_left",
+        "displayName": "Big cloud 1 (bottom left)",
+        "sprite": "cloud_3_bottom_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "cloud_3_bottom_right",
+        "displayName": "Big cloud 1 (bottom right)",
+        "sprite": "cloud_3_bottom_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "cloud_3_top",
+        "displayName": "Big cloud 1 (top)",
+        "sprite": "cloud_3_top",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "cloud_3_top_left",
+        "displayName": "Big cloud 1 (top left)",
+        "sprite": "cloud_3_top_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "cloud_3_top_right",
+        "displayName": "Big cloud 1 (top right)",
+        "sprite": "cloud_3_top_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "coconut",
+        "displayName": "Coconut",
+        "sprite": "coconut",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "background"
+        ]
+    },
+    {
+        "internalName": "coral",
+        "displayName": "Coral",
+        "sprite": "coral",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "background"
+        ]
+    },
+    {
+        "internalName": "coral_top",
+        "displayName": "Coral (top)",
+        "sprite": "coral_top",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "background"
+        ]
+    },
+    {
+        "internalName": "ground_1",
+        "displayName": "Ground 1",
+        "sprite": "ground_1",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_1_bottom",
+        "displayName": "Ground 1 (bottom)",
+        "sprite": "ground_1_bottom",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_1_bottom_left",
+        "displayName": "Ground 1 (bottom left)",
+        "sprite": "ground_1_bottom_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_1_bottom_right",
+        "displayName": "Ground 1 (bottom right)",
+        "sprite": "ground_1_bottom_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_1_left",
+        "displayName": "Ground 1 (left)",
+        "sprite": "ground_1_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_1_right",
+        "displayName": "Ground 1 (right)",
+        "sprite": "ground_1_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_1_slope_left",
+        "displayName": "Ground 1 slope (left)",
+        "sprite": "ground_1_slope_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_1_slope_right",
+        "displayName": "Ground 1 slope (right)",
+        "sprite": "ground_1_slope_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_1_top",
+        "displayName": "Ground 1 (top)",
+        "sprite": "ground_1_top",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_1_top_left",
+        "displayName": "Ground 1 (top left)",
+        "sprite": "ground_1_top_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_1_top_right",
+        "displayName": "Ground 1 (top right)",
+        "sprite": "ground_1_top_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_grass",
+        "displayName": "Grass ground",
+        "sprite": "ground_grass",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_grass_bottom",
+        "displayName": "Grass ground (bottom)",
+        "sprite": "ground_grass_bottom",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_grass_hill_left_0",
+        "displayName": "Grass ground hill (left)",
+        "sprite": "ground_grass_hill_left_0",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_grass_hill_left_1",
+        "displayName": "Grass ground hill (left 1)",
+        "sprite": "ground_grass_hill_left_1",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_grass_hill_right_0",
+        "displayName": "Grass ground hill (right)",
+        "sprite": "ground_grass_hill_right_0",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_grass_hill_right_1",
+        "displayName": "Grass ground hill (right 1)",
+        "sprite": "ground_grass_hill_right_1",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_grass_left",
+        "displayName": "Grass ground (left)",
+        "sprite": "ground_grass_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_grass_right",
+        "displayName": "Grass ground (right)",
+        "sprite": "ground_grass_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_grass_slope_left",
+        "displayName": "Grass ground slope (left)",
+        "sprite": "ground_grass_slope_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_grass_slope_right",
+        "displayName": "Grass ground slope (right)",
+        "sprite": "ground_grass_slope_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_grass_top",
+        "displayName": "Grass ground (top)",
+        "sprite": "ground_grass_top",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_grass_top_left",
+        "displayName": "Grass ground (top left)",
+        "sprite": "ground_grass_top_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_grass_top_right",
+        "displayName": "Grass ground (top right)",
+        "sprite": "ground_grass_top_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_marble_bottom_left",
+        "displayName": "Marble ground (bottom left)",
+        "sprite": "ground_marble_bottom_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_marble_bottom_right",
+        "displayName": "Marble ground (bottom right)",
+        "sprite": "ground_marble_bottom_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_marble_top_left",
+        "displayName": "Marble ground (top left)",
+        "sprite": "ground_marble_top_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_marble_top_right",
+        "displayName": "Marble ground (top right)",
+        "sprite": "ground_marble_top_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_metal",
+        "displayName": "Metal ground",
+        "sprite": "ground_metal",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_metal_bottom",
+        "displayName": "Metal ground (bottom)",
+        "sprite": "ground_metal_bottom",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_metal_bottom_left",
+        "displayName": "Metal ground (bottom left)",
+        "sprite": "ground_metal_bottom_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_metal_bottom_right",
+        "displayName": "Metal ground (bottom right)",
+        "sprite": "ground_metal_bottom_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_metal_left",
+        "displayName": "Metal ground (left)",
+        "sprite": "ground_metal_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_metal_right",
+        "displayName": "Metal ground (right)",
+        "sprite": "ground_metal_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_metal_slope_left",
+        "displayName": "Metal ground slope (left)",
+        "sprite": "ground_metal_slope_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_metal_slope_right",
+        "displayName": "Metal ground slope (right)",
+        "sprite": "ground_metal_slope_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_metal_top",
+        "displayName": "Metal ground (top)",
+        "sprite": "ground_metal_top",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_metal_top_left",
+        "displayName": "Metal ground (top left)",
+        "sprite": "ground_metal_top_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_metal_top_right",
+        "displayName": "Metal ground (top right)",
+        "sprite": "ground_metal_top_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_pasture",
+        "displayName": "Pasture",
+        "sprite": "ground_pasture",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_pasture_left",
+        "displayName": "Pasture (left)",
+        "sprite": "ground_pasture_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_pasture_right",
+        "displayName": "Pasture (right)",
+        "sprite": "ground_pasture_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_pasture_top",
+        "displayName": "Pasture (top)",
+        "sprite": "ground_pasture_top",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_pasture_top_left",
+        "displayName": "Pasture (top left)",
+        "sprite": "ground_pasture_top_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_pasture_top_right",
+        "displayName": "Pasture (top right)",
+        "sprite": "ground_pasture_top_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_sand_top",
+        "displayName": "Sand (top)",
+        "sprite": "ground_sand_top",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ground_sky",
+        "displayName": "Sky (top)",
+        "sprite": "ground_sky",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "ground"
+        ]
+    },
+    {
+        "internalName": "ice_heaven",
+        "displayName": "Ice background",
+        "sprite": "ice_heaven",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "background"
+        ]
+    },
+    {
+        "internalName": "level_end",
+        "displayName": "Level's end",
+        "sprite": "level_end",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "background"
+        ]
+    },
+    {
+        "internalName": "level_end_border",
+        "displayName": "Level's end border",
+        "sprite": "level_end_border",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "background"
+        ]
+    },
+    {
+        "internalName": "palm_tree_left",
+        "displayName": "Palm tree (top left)",
+        "sprite": "palm_tree_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "background"
+        ]
+    },
+    {
+        "internalName": "palm_tree_right",
+        "displayName": "Palm tree (top right)",
+        "sprite": "palm_tree_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "background"
+        ]
+    },
+    {
+        "internalName": "palm_tree_trunk",
+        "displayName": "Palm tree (bottom right)",
+        "sprite": "palm_tree_trunk",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "background"
+        ]
+    },
+    {
+        "internalName": "panel_blue",
+        "displayName": "Blue panel",
+        "sprite": "panel_blue",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_blue_bottom",
+        "displayName": "Blue panel (bottom)",
+        "sprite": "panel_blue_bottom",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_blue_bottom_left",
+        "displayName": "Blue panel (bottom left)",
+        "sprite": "panel_blue_bottom_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_blue_bottom_right",
+        "displayName": "Blue panel (bottom right)",
+        "sprite": "panel_blue_bottom_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_blue_left",
+        "displayName": "Blue panel (left)",
+        "sprite": "panel_blue_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_blue_right",
+        "displayName": "Blue panel (right)",
+        "sprite": "panel_blue_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_blue_top",
+        "displayName": "Blue panel (top)",
+        "sprite": "panel_blue_top",
+        "collisions": {
+            "up": true,
+            "down": false,
+            "left": false,
+            "right": false
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_blue_top_left",
+        "displayName": "Blue panel (top left)",
+        "sprite": "panel_blue_top_left",
+        "collisions": {
+            "up": true,
+            "down": false,
+            "left": false,
+            "right": false
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_blue_top_right",
+        "displayName": "Blue panel (top right)",
+        "sprite": "panel_blue_top_right",
+        "collisions": {
+            "up": true,
+            "down": false,
+            "left": false,
+            "right": false
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_border_bottom",
+        "displayName": "Panel border (bottom)",
+        "sprite": "panel_border_bottom",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_border_bottom_left",
+        "displayName": "Panel border (bottom left)",
+        "sprite": "panel_border_bottom_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_border_bottom_right",
+        "displayName": "Panel border (bottom right)",
+        "sprite": "panel_border_bottom_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_border_right",
+        "displayName": "Panel border (right)",
+        "sprite": "panel_border_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_border_top_right",
+        "displayName": "Panel border (top right)",
+        "sprite": "panel_border_top_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_green",
+        "displayName": "Green panel",
+        "sprite": "panel_green",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_green_bottom",
+        "displayName": "Green panel (bottom)",
+        "sprite": "panel_green_bottom",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_green_bottom_left",
+        "displayName": "Green panel (bottom left)",
+        "sprite": "panel_green_bottom_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_green_bottom_right",
+        "displayName": "Green panel (bottom right)",
+        "sprite": "panel_green_bottom_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_green_left",
+        "displayName": "Green panel (left)",
+        "sprite": "panel_green_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_green_right",
+        "displayName": "Green panel (right)",
+        "sprite": "panel_green_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_green_top",
+        "displayName": "Green panel (top)",
+        "sprite": "panel_green_top",
+        "collisions": {
+            "up": true,
+            "down": false,
+            "left": false,
+            "right": false
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_green_top_left",
+        "displayName": "Green panel (top left)",
+        "sprite": "panel_green_top_left",
+        "collisions": {
+            "up": true,
+            "down": false,
+            "left": false,
+            "right": false
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_green_top_right",
+        "displayName": "Green panel (top right)",
+        "sprite": "panel_green_top_right",
+        "collisions": {
+            "up": true,
+            "down": false,
+            "left": false,
+            "right": false
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_water",
+        "displayName": "Water panel",
+        "sprite": "panel_water",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_water_bottom",
+        "displayName": "Water panel (bottom)",
+        "sprite": "panel_water_bottom",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_water_bottom_left",
+        "displayName": "Water panel (bottom left)",
+        "sprite": "panel_water_bottom_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_water_bottom_right",
+        "displayName": "Water panel (bottom right)",
+        "sprite": "panel_water_bottom_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_water_left",
+        "displayName": "Water panel (left)",
+        "sprite": "panel_water_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_water_right",
+        "displayName": "Water panel (right)",
+        "sprite": "panel_water_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_water_top",
+        "displayName": "Water panel (top)",
+        "sprite": "panel_water_top",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_water_top_left",
+        "displayName": "Water panel (top left)",
+        "sprite": "panel_water_top_left",
+        "collisions": {
+            "up": true,
+            "down": false,
+            "left": false,
+            "right": false
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_water_top_right",
+        "displayName": "Water panel (top right)",
+        "sprite": "panel_water_top_right",
+        "collisions": {
+            "up": true,
+            "down": false,
+            "left": false,
+            "right": false
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_white",
+        "displayName": "White panel",
+        "sprite": "panel_white",
+        "collisions": {
+            "up": true,
+            "down": false,
+            "left": false,
+            "right": false
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_white_bottom",
+        "displayName": "White panel (bottom)",
+        "sprite": "panel_white_bottom",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_white_bottom_left",
+        "displayName": "White panel (bottom left)",
+        "sprite": "panel_white_bottom_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_white_bottom_right",
+        "displayName": "White panel (bottom right)",
+        "sprite": "panel_white_bottom_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_white_left",
+        "displayName": "White panel (left)",
+        "sprite": "panel_white_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_white_right",
+        "displayName": "White panel (right)",
+        "sprite": "panel_white_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_white_top",
+        "displayName": "White panel (top)",
+        "sprite": "panel_white_top",
+        "collisions": {
+            "up": true,
+            "down": false,
+            "left": false,
+            "right": false
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_white_top_left",
+        "displayName": "White panel (top left)",
+        "sprite": "panel_white_top_left",
+        "collisions": {
+            "up": true,
+            "down": false,
+            "left": false,
+            "right": false
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_white_top_right",
+        "displayName": "White panel (top right)",
+        "sprite": "panel_white_top_right",
+        "collisions": {
+            "up": true,
+            "down": false,
+            "left": false,
+            "right": false
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_yellow",
+        "displayName": "Yellow panel",
+        "sprite": "panel_yellow",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_yellow_bottom",
+        "displayName": "Yellow panel (bottom)",
+        "sprite": "panel_yellow_bottom",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_yellow_bottom_left",
+        "displayName": "Yellow panel (bottom left)",
+        "sprite": "panel_yellow_bottom_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_yellow_bottom_right",
+        "displayName": "Yellow panel (bottom right)",
+        "sprite": "panel_yellow_bottom_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_yellow_left",
+        "displayName": "Yellow panel (left)",
+        "sprite": "panel_yellow_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_yellow_right",
+        "displayName": "Yellow panel (right)",
+        "sprite": "panel_yellow_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_yellow_top",
+        "displayName": "Yellow panel (top)",
+        "sprite": "panel_yellow_top",
+        "collisions": {
+            "up": true,
+            "down": false,
+            "left": false,
+            "right": false
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_yellow_top_left",
+        "displayName": "Yellow panel (top left)",
+        "sprite": "panel_yellow_top_left",
+        "collisions": {
+            "up": true,
+            "down": false,
+            "left": false,
+            "right": false
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "panel_yellow_top_right",
+        "displayName": "Yellow panel (top right)",
+        "sprite": "panel_yellow_top_right",
+        "collisions": {
+            "up": true,
+            "down": false,
+            "left": false,
+            "right": false
+        },
+        "categories": [
+            "panels"
+        ]
+    },
+    {
+        "internalName": "pillar_wooden",
+        "displayName": "Wooden pillar",
+        "sprite": "pillar_wooden",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "buildings"
+        ]
+    },
+    {
+        "internalName": "pipe_horizontal_black_bottom",
+        "displayName": "Horizontal black pipe (bottom)",
+        "sprite": "pipe_horizontal_black_bottom",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_horizontal_black_notch_bottom",
+        "displayName": "Horizontal black pipe notch (bottom)",
+        "sprite": "pipe_horizontal_black_notch_bottom",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_horizontal_black_notch_top",
+        "displayName": "Horizontal black pipe notch (top)",
+        "sprite": "pipe_horizontal_black_notch_top",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_horizontal_black_top",
+        "displayName": "Horizontal black pipe (top)",
+        "sprite": "pipe_horizontal_black_top",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_horizontal_blue_bottom",
+        "displayName": "Horizontal blue pipe (bottom)",
+        "sprite": "pipe_horizontal_blue_bottom",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_horizontal_blue_notch_bottom",
+        "displayName": "Horizontal blue pipe notch (bottom)",
+        "sprite": "pipe_horizontal_blue_notch_bottom",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_horizontal_blue_notch_top",
+        "displayName": "Horizontal blue pipe notch (top)",
+        "sprite": "pipe_horizontal_blue_notch_top",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_horizontal_blue_top",
+        "displayName": "Horizontal blue pipe (top)",
+        "sprite": "pipe_horizontal_blue_top",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_horizontal_green_bottom",
+        "displayName": "Horizontal green pipe (bottom)",
+        "sprite": "pipe_horizontal_green_bottom",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_horizontal_green_notch_bottom",
+        "displayName": "Horizontal green pipe notch (bottom)",
+        "sprite": "pipe_horizontal_green_notch_bottom",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_horizontal_green_notch_top",
+        "displayName": "Horizontal green pipe notch (top)",
+        "sprite": "pipe_horizontal_green_notch_top",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_horizontal_green_top",
+        "displayName": "Horizontal green pipe (top)",
+        "sprite": "pipe_horizontal_green_top",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_horizontal_orange_bottom",
+        "displayName": "Horizontal orange pipe (bottom)",
+        "sprite": "pipe_horizontal_orange_bottom",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_horizontal_orange_notch_bottom",
+        "displayName": "Horizontal orange pipe notch (bottom)",
+        "sprite": "pipe_horizontal_orange_notch_bottom",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_horizontal_orange_notch_top",
+        "displayName": "Horizontal orange pipe notch (top)",
+        "sprite": "pipe_horizontal_orange_notch_top",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_horizontal_orange_top",
+        "displayName": "Horizontal orange pipe (top)",
+        "sprite": "pipe_horizontal_orange_top",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_horizontal_white_bottom",
+        "displayName": "Horizontal white pipe (bottom)",
+        "sprite": "pipe_horizontal_white_bottom",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_horizontal_white_notch_bottom",
+        "displayName": "Horizontal white pipe notch (bottom)",
+        "sprite": "pipe_horizontal_white_notch_bottom",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_horizontal_white_notch_top",
+        "displayName": "Horizontal white pipe notch (top)",
+        "sprite": "pipe_horizontal_white_notch_top",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_horizontal_white_top",
+        "displayName": "Horizontal white pipe (top)",
+        "sprite": "pipe_horizontal_white_top",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_join_0_bottom_left",
+        "displayName": "Pipe joint SE (bottom left)",
+        "sprite": "pipe_join_0_bottom_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_join_0_bottom_right",
+        "displayName": "Pipe joint SE (bottom right)",
+        "sprite": "pipe_join_0_bottom_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_join_0_top_left",
+        "displayName": "Pipe joint SE (top left)",
+        "sprite": "pipe_join_0_top_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_join_0_top_right",
+        "displayName": "Pipe joint SE (top right)",
+        "sprite": "pipe_join_0_top_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_join_1_bottom_left",
+        "displayName": "Pipe joint SW (bottom left)",
+        "sprite": "pipe_join_1_bottom_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_join_1_bottom_right",
+        "displayName": "Pipe joint SW (top left)",
+        "sprite": "pipe_join_1_bottom_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_join_1_top_left",
+        "displayName": "Pipe joint SW (bottom left)",
+        "sprite": "pipe_join_1_top_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_join_1_top_right",
+        "displayName": "Pipe joint SW (top right)",
+        "sprite": "pipe_join_1_top_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_join_2_bottom_left",
+        "displayName": "Pipe joint NE (bottom left)",
+        "sprite": "pipe_join_2_bottom_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_join_2_bottom_right",
+        "displayName": "Pipe joint NE (top left)",
+        "sprite": "pipe_join_2_bottom_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_join_2_top_left",
+        "displayName": "Pipe joint NE (bottom left)",
+        "sprite": "pipe_join_2_top_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_join_2_top_right",
+        "displayName": "Pipe joint NE (top right)",
+        "sprite": "pipe_join_2_top_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_join_3_bottom_left",
+        "displayName": "Pipe joint NW (bottom left)",
+        "sprite": "pipe_join_3_bottom_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_join_3_bottom_right",
+        "displayName": "Pipe joint NW (top left)",
+        "sprite": "pipe_join_3_bottom_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_join_3_top_left",
+        "displayName": "Pipe joint NW (bottom left)",
+        "sprite": "pipe_join_3_top_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_join_3_top_right",
+        "displayName": "Pipe joint NW (top right)",
+        "sprite": "pipe_join_3_top_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_small_green_horizontal",
+        "displayName": "Small horizontal green pipe",
+        "sprite": "pipe_small_green_horizontal",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_small_green_notch_bottom",
+        "displayName": "Small vertical green pipe (bottom)",
+        "sprite": "pipe_small_green_notch_bottom",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_small_green_notch_left",
+        "displayName": "Small horizontal green pipe (left)",
+        "sprite": "pipe_small_green_notch_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_small_green_notch_right",
+        "displayName": "Small horizontal green pipe (right)",
+        "sprite": "pipe_small_green_notch_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_small_green_notch_top",
+        "displayName": "Small vertical green pipe (top)",
+        "sprite": "pipe_small_green_notch_top",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_small_green_vertical",
+        "displayName": "Small vertical green pipe",
+        "sprite": "pipe_small_green_vertical",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_small_purple_break",
+        "displayName": "Small horizontal purple pipe (break)",
+        "sprite": "pipe_small_purple_break",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_small_purple_horizontal",
+        "displayName": "Small horizontal purple pipe",
+        "sprite": "pipe_small_purple_horizontal",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_small_purple_join",
+        "displayName": "Small horizontal purple pipe (joint)",
+        "sprite": "pipe_small_purple_join",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_small_purple_pillar",
+        "displayName": "Small vertical purple pipe pillar",
+        "sprite": "pipe_small_purple_pillar",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_small_purple_pillar_left",
+        "displayName": "Small vertical purple pipe pillar (left)",
+        "sprite": "pipe_small_purple_pillar_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_small_purple_pillar_right",
+        "displayName": "Small vertical purple pipe pillar (right)",
+        "sprite": "pipe_small_purple_pillar_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_small_purple_vertical",
+        "displayName": "Small vertical purple pipe",
+        "sprite": "pipe_small_purple_vertical",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_vertical_black_left",
+        "displayName": "Vertical black pipe (left)",
+        "sprite": "pipe_vertical_black_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_vertical_black_notch_left",
+        "displayName": "Vertical black pipe notch (left)",
+        "sprite": "pipe_vertical_black_notch_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_vertical_black_notch_right",
+        "displayName": "Vertical black pipe notch (right)",
+        "sprite": "pipe_vertical_black_notch_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_vertical_black_right",
+        "displayName": "Vertical black pipe (right)",
+        "sprite": "pipe_vertical_black_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_vertical_blue_left",
+        "displayName": "Vertical blue pipe (left)",
+        "sprite": "pipe_vertical_blue_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_vertical_blue_notch_left",
+        "displayName": "Vertical blue pipe notch (left)",
+        "sprite": "pipe_vertical_blue_notch_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_vertical_blue_notch_right",
+        "displayName": "Vertical blue pipe notch (right)",
+        "sprite": "pipe_vertical_blue_notch_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_vertical_blue_right",
+        "displayName": "Vertical blue pipe (right)",
+        "sprite": "pipe_vertical_blue_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_vertical_orange_left",
+        "displayName": "Vertical orange pipe (left)",
+        "sprite": "pipe_vertical_orange_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_vertical_orange_notch_left",
+        "displayName": "Vertical orange pipe notch (left)",
+        "sprite": "pipe_vertical_orange_notch_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_vertical_orange_notch_right",
+        "displayName": "Vertical orange pipe notch (right)",
+        "sprite": "pipe_vertical_orange_notch_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_vertical_orange_right",
+        "displayName": "Vertical orange pipe (right)",
+        "sprite": "pipe_vertical_orange_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_vertical_white_left",
+        "displayName": "Vertical white pipe (left)",
+        "sprite": "pipe_vertical_white_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_vertical_white_notch_left",
+        "displayName": "Vertical white pipe notch (left)",
+        "sprite": "pipe_vertical_white_notch_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_vertical_white_notch_right",
+        "displayName": "Vertical white pipe notch (right)",
+        "sprite": "pipe_vertical_white_notch_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "pipe_vertical_white_right",
+        "displayName": "Vertical white pipe (right)",
+        "sprite": "pipe_vertical_white_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "pipes"
+        ]
+    },
+    {
+        "internalName": "platform_granite",
+        "displayName": "Granite platform ",
+        "sprite": "platform_granite",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "platform_granite_bottom",
+        "displayName": "Granite platform (bottom)",
+        "sprite": "platform_granite_bottom",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "platform_granite_bottom_left",
+        "displayName": "Granite platform (bottom left)",
+        "sprite": "platform_granite_bottom_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "platform_granite_bottom_right",
+        "displayName": "Granite platform (bottom right)",
+        "sprite": "platform_granite_bottom_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "platform_granite_left",
+        "displayName": "Granite platform (left)",
+        "sprite": "platform_granite_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "platform_granite_right",
+        "displayName": "Granite platform (right)",
+        "sprite": "platform_granite_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "platform_granite_small_left",
+        "displayName": "Small granite platform (left)",
+        "sprite": "platform_granite_small_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "platform_granite_small_right",
+        "displayName": "Small granite platform (right)",
+        "sprite": "platform_granite_small_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "platform_granite_top",
+        "displayName": "Granite platform (top)",
+        "sprite": "platform_granite_top",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "platform_granite_top_left",
+        "displayName": "Granite platform (top left)",
+        "sprite": "platform_granite_top_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "platform_granite_top_right",
+        "displayName": "Granite platform (top right)",
+        "sprite": "platform_granite_top_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "platform_sand",
+        "displayName": "Sand platform",
+        "sprite": "platform_sand",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "platform_sand_bottom",
+        "displayName": "Sand platform (bottom)",
+        "sprite": "platform_sand_bottom",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "platform_sand_bottom_left",
+        "displayName": "Sand platform (bottom left)",
+        "sprite": "platform_sand_bottom_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "platform_sand_bottom_right",
+        "displayName": "Sand platform (bottom right)",
+        "sprite": "platform_sand_bottom_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "platform_sand_left",
+        "displayName": "Sand platform (left)",
+        "sprite": "platform_sand_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "platform_sand_right",
+        "displayName": "Sand platform (right)",
+        "sprite": "platform_sand_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "platform_sand_small_left",
+        "displayName": "Small sand platform (left)",
+        "sprite": "platform_sand_small_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "platform_sand_small_right",
+        "displayName": "Small sand platform (right)",
+        "sprite": "platform_sand_small_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "platform_sand_top",
+        "displayName": "Sand platform (top)",
+        "sprite": "platform_sand_top",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "platform_sand_top_left",
+        "displayName": "Sand platform (top left)",
+        "sprite": "platform_sand_top_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "platform_sand_top_right",
+        "displayName": "Sand platform (top right)",
+        "sprite": "platform_sand_top_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "platform_wooden",
+        "displayName": "Wooden platform",
+        "sprite": "platform_wooden",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "platform_wooden_left",
+        "displayName": "Wooden platform (left)",
+        "sprite": "platform_wooden_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "platform_wooden_right",
+        "displayName": "Wooden platform (right)",
+        "sprite": "platform_wooden_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "platform_wooden_thick_bottom",
+        "displayName": "Thick wooden platform (bottom)",
+        "sprite": "platform_wooden_thick_bottom",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "platform_wooden_thick_bottom_left",
+        "displayName": "Thick wooden platform (bottom left)",
+        "sprite": "platform_wooden_thick_bottom_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "platform_wooden_thick_bottom_right",
+        "displayName": "Thick wooden platform (bottom right)",
+        "sprite": "platform_wooden_thick_bottom_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "platform_wooden_thick_top",
+        "displayName": "Thick wooden platform (top)",
+        "sprite": "platform_wooden_thick_top",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "platform_wooden_thick_top_left",
+        "displayName": "Thick wooden platform (top left)",
+        "sprite": "platform_wooden_thick_top_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "platform_wooden_thick_top_right",
+        "displayName": "Thick wooden platform (top right)",
+        "sprite": "platform_wooden_thick_top_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "blocks"
+        ]
+    },
+    {
+        "internalName": "pyramid_bottom_left",
+        "displayName": "Pyramid (bottom left)",
+        "sprite": "pyramid_bottom_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "background"
+        ]
+    },
+    {
+        "internalName": "pyramid_bottom_right",
+        "displayName": "Pyramid (bottom right)",
+        "sprite": "pyramid_bottom_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "background"
+        ]
+    },
+    {
+        "internalName": "pyramid_top_left",
+        "displayName": "Pyramid (top left)",
+        "sprite": "pyramid_top_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "background"
+        ]
+    },
+    {
+        "internalName": "pyramid_top_right",
+        "displayName": "Pyramid (top right)",
+        "sprite": "pyramid_top_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "background"
+        ]
+    },
+    {
+        "internalName": "tribush",
+        "displayName": "Tribush",
+        "sprite": "tribush",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "background"
+        ]
+    },
+    {
+        "internalName": "tribush_left",
+        "displayName": "Tribush (left)",
+        "sprite": "tribush_left",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "background"
+        ]
+    },
+    {
+        "internalName": "tribush_right",
+        "displayName": "Tribush (right)",
+        "sprite": "tribush_right",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "background"
+        ]
+    },
+    {
+        "internalName": "water",
+        "displayName": "Water",
+        "sprite": "water",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "water"
+        ]
+    },
+    {
+        "internalName": "water_cascade_0",
+        "displayName": "Water cascade",
+        "sprite": "water_cascade_0",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "water"
+        ]
+    },
+    {
+        "internalName": "water_cascade_1",
+        "displayName": "Water cascade (1)",
+        "sprite": "water_cascade_1",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "water"
+        ]
+    },
+    {
+        "internalName": "water_near_top",
+        "displayName": "Water top",
+        "sprite": "water_near_top",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "water"
+        ]
+    },
+    {
+        "internalName": "water_top",
+        "displayName": "Water top (waves)",
+        "sprite": "water_top",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "water"
+        ]
+    },
+    {
+        "internalName": "window_0",
+        "displayName": "Window",
+        "sprite": "window_0",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "interior"
+        ]
+    },
+    {
+        "internalName": "window_1",
+        "displayName": "Window 1",
+        "sprite": "window_1",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "interior"
+        ]
+    },
+    {
+        "internalName": "window_2",
+        "displayName": "Window 2",
+        "sprite": "window_2",
+        "collisions": {
+            "up": true,
+            "down": true,
+            "left": true,
+            "right": true
+        },
+        "categories": [
+            "interior"
+        ]
+    }
+]
