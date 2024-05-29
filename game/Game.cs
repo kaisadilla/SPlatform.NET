@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace splatform.game;
+// TODO: Split this class into a "Game" class that manages the actual game,
+// and some "Program" class that manages windows, options like scale, etc.
 internal class Game {
     private const int FPS_CAP = 180; // TODO: parameterize
     private const int WINDOW_WIDTH = WINDOW_WIDTH_IN_TILES * PIXELS_PER_TILE;
@@ -17,24 +19,27 @@ internal class Game {
 
     public bool IsOpen => _window.IsOpen;
 
+    #region Player stats
     public int Lives { get; private set; } = 5;
     public int Coins { get; private set; } = 0;
     public int Score { get; private set; } = 0;
     public int YoshiCoins {  get; private set; } = 0;
     public int[] EndLevelItems { get; private set; } = [0, 0, 0];
+    #endregion
 
     private RenderWindow _window;
     private float _cumulativeFixedTime = 0.0f;
 
     private Scene _scene;
 
-    // FPS counter
+    #region Fps counter fields
+    // TODO: Move this functionality to FpsCounter itself.
     private bool _cappedFps = true;
     private FpsCounter _fpsCounter = new();
     private float _timeSinceLastFpsUpdate = 0.0f;
-    
+    #endregion
 
-    // Debug information
+    // todo: move to a class that draws debug info.
     private RectangleShape _debugBg = new();
     private Font _debugFont;
     private Text _infoFps = new();
@@ -52,15 +57,13 @@ internal class Game {
     }
 
     public void Init () {
+        VideoMode video = new(WINDOW_WIDTH * 2, WINDOW_HEIGHT * 2);
+
         _fpsCounter.SetUpdateTime(0.1f);
 
-        // TODO: ???
+        // TODO: Is it necessary to make a new window?
         _window.Close();
-        _window = new(
-            new(WINDOW_WIDTH * 2, WINDOW_HEIGHT * 2),
-            "SPlatform",
-            SFML.Window.Styles.Close
-        );
+        _window = new(video, WINDOW_TITLE, SFML.Window.Styles.Close);
         _window.SetFramerateLimit(FPS_CAP);
 
         SetupWindowEvents();
@@ -71,15 +74,11 @@ internal class Game {
         _scene = LevelScene.FromBinary("level1-1-goomba");
 
         _scene.SetWindowSizes((ivec2)_window.Size, new(2f, 2f));
-        _scene.Init(_window);
-        _scene.OnEnter();
-
-        Time.Start();
+        _scene.Init(this, _window);
+        _scene.Start();
     }
 
     public void Update () {
-        Time.Update();
-
         _cumulativeFixedTime += Time.DeltaTime;
 
         while (_cumulativeFixedTime > SECONDS_PER_FIXED_UPDATE) {
@@ -90,33 +89,31 @@ internal class Game {
         UpdateFps();
         _window.DispatchEvents();
 
-        _scene.OnUpdate();
+        _scene.Update();
+    }
+
+    private void FixedUpdate () {
+        _scene.FixedUpdate();
+    }
+
+    public void LateUpdate () {
+        _scene.LateUpdate();
     }
 
     public void Close () {
-        _scene.Dispatch(_window);
+        _scene.Close(_window);
         _window.Close();
     }
 
     public void Draw () {
-        //CircleShape __DEBG = new();
-        //__DEBG.Radius = 30.0f;
-        //__DEBG.Position = new(300.0f, 300.0f);
-        //__DEBG.FillColor = Color.Blue;
-
         _window.Clear();
-        //_window.Draw(__DEBG);
-        _scene.OnDraw(_window);
+        _scene.DrawTo(_window);
 
         if (Debug.ShowDebugInfo) {
             DrawDebugInfo();
         }
 
         _window.Display();
-    }
-
-    public void LateUpdate () {
-
     }
 
     private void SetupWindowEvents () {
@@ -171,7 +168,7 @@ internal class Game {
     }
 
     private void HandleSceneKeyEvents (object? sender, KeyEventArgs evt) {
-        _scene.OnEvent(evt);
+        _scene.ProcessKeyboardEvents(evt);
     }
 
     private void SetupDebugInfo () {
@@ -199,10 +196,6 @@ internal class Game {
         _infoTimeScale.CharacterSize = 12;
         _infoTimeScale.FillColor = Color.White;
         _infoTimeScale.Style = Text.Styles.Regular;
-    }
-
-    private void FixedUpdate () {
-        // TODO
     }
 
     private void UpdateFps () {

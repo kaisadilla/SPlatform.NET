@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace splatform.entities;
-internal abstract partial class Entity {
+internal partial class Entity {
     const long BEHAVIOR_ENEMY_START_INDEX = 1_000;
 
     private enum Behavior : long {

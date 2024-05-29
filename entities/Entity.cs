@@ -11,8 +11,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace splatform.entities;
-internal abstract partial class Entity : IGameObject {
-    public abstract GameObjectType Type { get; }
+// TODO: Make abstract
+internal partial class Entity : IGameObject {
+    public virtual GameObjectType Type => GameObjectType.Enemy; // TODO: Make absrtact
 
     protected vec2 _size;
     protected vec2 _position;
@@ -85,9 +86,9 @@ internal abstract partial class Entity : IGameObject {
     #endregion
 
     #region Sprite members
-    protected AnimationState _animations;
+    protected AnimationState _animations = new();
     protected Texture _texture;
-    protected RectangleShape _sprite; // TODO: Replace with sf::Sprite
+    protected RectangleShape _sprite = new(); // TODO: Replace with sf::Sprite
     protected float _animationSpeed = 1f;
     /// <summary>
     /// If true, this entity's sprite will be horizontally flipped.
@@ -148,6 +149,13 @@ internal abstract partial class Entity : IGameObject {
         //collider.setPosition(position);
         _sprite.Position = PixelPosition + new vec2(0, 1);
     }
+
+    public void SetGridPosition (ivec2 position) {
+        SetPosition(new(
+            position.X * PIXELS_PER_TILE,
+            position.Y * PIXELS_PER_TILE
+        ));
+    }
     #endregion
 
     #region Initialization
@@ -200,6 +208,10 @@ internal abstract partial class Entity : IGameObject {
         if (_isUpdated) {
             OnFixedUpdate();
         }
+    }
+
+    public void Draw (RenderWindow window) {
+        window.Draw(_sprite);
     }
     #endregion
 
@@ -296,4 +308,13 @@ internal abstract partial class Entity : IGameObject {
     }
 
     protected virtual void DrawDebugInfo (RenderWindow window) { }
+
+    public void __TEMP_set_sprite_by_filename (string name, vec2 size) {
+        _texture = new(PATH_ENTITY_SPRITES + "/" + name + ".png");
+
+        _sprite = new RectangleShape(size) {
+            Texture = _texture,
+            TextureRect = new(0, 0, (int)size.X, (int)size.Y),
+        };
+    }
 }

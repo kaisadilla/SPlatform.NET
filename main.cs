@@ -1,21 +1,21 @@
 ﻿global using static splatform.Constants;
-global using vec2 = SFML.System.Vector2f;
 global using ivec2 = SFML.System.Vector2i;
-global using uvec2 = SFML.System.Vector2u;
+global using vec2 = SFML.System.Vector2f;
 
-using SFML.Graphics;
-using splatform.game;
+using splatform;
 using splatform.assets;
-using splatform.game.scenes;
-using System.IO;
+using splatform.game;
 
 // Must be loaded before doing anything else.
 Assets.LoadData();
+Time.Start();
 
 Game game = new();
 game.Init();
 
 while (game.IsOpen) {
+    Time.Update();
+
     game.Update();
     game.Draw();
     game.LateUpdate();

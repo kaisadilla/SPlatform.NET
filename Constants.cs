@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace splatform;
 public static class Constants {
+    public const string WINDOW_TITLE = "SPlatform";
+
     public const int WINDOW_WIDTH_IN_TILES = 24;
     public const int WINDOW_HEIGHT_IN_TILES = 14;
 

@@ -2,6 +2,7 @@
 using SFML.Graphics;
 using SFML.System;
 using SFML.Window;
+using splatform.entities;
 using splatform.player;
 using splatform.tiles;
 using System;
@@ -14,17 +15,18 @@ namespace splatform.game.scenes;
 internal partial class LevelScene : Scene {
     public int Width { get; private set; }
     public int Height { get; private set; }
-    public int TimeLeft { get; private set; }
+    public float TimeLeft { get; private set; }
 
     /************************
      * BACKGROUND AND MUSIC *
      ************************/
+    // TODO: Move everything except music to a background class.
     private float _backgroundParallaxMaxX = 0;
     private float _backgroundParallaxMaxY = 0;
     private float _levelParallaxMaxX = 0;
     private float _levelParallaxMaxY = 0;
     private Texture _backgroundTexture = new(1, 1);
-    private Sprite _backgroundImage = new();
+    private Sprite _backgroundImage = new(); // TODO: Multiple backgrounds.
     private Music? _music;
 
     private List<Tile> _backgroundLayer = new();
@@ -32,6 +34,7 @@ internal partial class LevelScene : Scene {
     private List<Tile> _detailLayer = new();
     private List<Tile> _frontLayer = new();
 
+    private Player _player = new();
     private Camera _camera = new(new(1, 1), new(1, 1));
     private vec2 __temp_playerPos = new(0, 400);
 
@@ -51,13 +54,16 @@ internal partial class LevelScene : Scene {
         (int)(WindowSize.Y / WindowZoom.Y)
     );
 
-    public override void Init (RenderWindow window) {
+    public override void Init (Game game, RenderWindow window) {
+        _game = game;
+
         InitializeBackground();
+        __TEMP_initialize_player();
 
         _camera = new(new(PixelWidth, PixelHeight), ViewSize);
     }
 
-    public override void OnEnter () {
+    public override void Start () {
 
         foreach (var tile in _backgroundLayer) {
             tile.OnStart();
@@ -67,49 +73,56 @@ internal partial class LevelScene : Scene {
         }
     }
 
-    public override void OnUpdate () {
-        _camera.UpdatePosition(__temp_playerPos);
+    public override void Update () {
+        TimeLeft -= Time.DeltaTime;
 
+        // update layers.
+
+        _player.Update();
+        _camera.UpdatePosition(_player.PixelPosition);
+
+        //DeleteDisposedObjects();
         UpdateBackgroundPosition();
 
         // TODO: Remove
-        if (Keyboard.IsKeyPressed(Keyboard.Key.A)) {
-            __temp_playerPos.X -= 1;
-        }
-        if (Keyboard.IsKeyPressed(Keyboard.Key.D)) {
-            __temp_playerPos.X += 1;
-        }
-        if (Keyboard.IsKeyPressed(Keyboard.Key.W)) {
-            __temp_playerPos.Y -= 1;
-        }
-        if (Keyboard.IsKeyPressed(Keyboard.Key.S)) {
-            __temp_playerPos.Y += 1;
-        }
+        //if (Keyboard.IsKeyPressed(Keyboard.Key.A)) {
+        //    __temp_playerPos.X -= 1;
+        //}
+        //if (Keyboard.IsKeyPressed(Keyboard.Key.D)) {
+        //    __temp_playerPos.X += 1;
+        //}
+        //if (Keyboard.IsKeyPressed(Keyboard.Key.W)) {
+        //    __temp_playerPos.Y -= 1;
+        //}
+        //if (Keyboard.IsKeyPressed(Keyboard.Key.S)) {
+        //    __temp_playerPos.Y += 1;
+        //}
     }
 
-    public override void OnFixedUpdate () {
-        throw new NotImplementedException();
+    public override void FixedUpdate () {
+        _player.FixedUpdate();
     }
 
-    public override void OnLateUpdate () {
-        throw new NotImplementedException();
+    public override void LateUpdate () {
+
     }
 
-    public override void OnDraw (RenderWindow window) {
+    public override void DrawTo (RenderWindow window) {
         window.Draw(_backgroundImage);
 
         window.SetView(_camera.View);
         DrawLayer(window, _backgroundLayer);
         DrawLayer(window, _foregroundLayer);
+        DrawPlayer(window);
 
         window.SetView(window.DefaultView);
     }
 
-    public override void OnEvent (KeyEventArgs evt) {
+    public override void ProcessKeyboardEvents (KeyEventArgs evt) {
 
     }
 
-    public override void Dispatch (RenderWindow window) {
+    public override void Close (RenderWindow window) {
 
     }
 
@@ -160,5 +173,17 @@ internal partial class LevelScene : Scene {
         foreach (var tile in layer) {
             tile.Draw(window);
         }
+    }
+
+    private void DrawPlayer (RenderWindow window) {
+        _player.Draw(window);
+    }
+
+    private void __TEMP_initialize_player () {
+        _player.SetDefaultSizes(new(32f, 32f), new(32f, 32f), new(11, 18, 10, 14));
+        _player.SetGridPosition(new(0, 22));
+        _player.__TEMP_set_sprite_by_filename("mario", new(32f, 32f));
+        _player.__TEMP_initialize_animations();
+        _player.SetLevel(this);
     }
 }
