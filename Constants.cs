@@ -16,7 +16,9 @@ public static class Constants {
     public const float DEAD_ENEMY_DESPAWN_TIME = 0.25f;
 
     #region Paths
+    public const string PATH_LEVELS = "res/data/levels";
     public const string PATH_REGISTRY = "res/data/registry.json";
+    public const string PATH_ENTITY_SPRITES = "res/sprites/entities";
     public const string PATH_TILE_SPRITES = "res/sprites/tiles";
     public const string PATH_PARTICLE_SPRITES = "res/sprites/particles";
     public const string PATH_BACKGROUND_IMAGES = "res/sprites/backgrounds";

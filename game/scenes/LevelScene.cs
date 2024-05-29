@@ -14,7 +14,7 @@ namespace splatform.game.scenes;
 internal partial class LevelScene : Scene {
     public int Width { get; private set; }
     public int Height { get; private set; }
-
+    public int TimeLeft { get; private set; }
 
     /************************
      * BACKGROUND AND MUSIC *

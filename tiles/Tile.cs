@@ -1,4 +1,5 @@
 ﻿using SFML.Graphics;
+using splatform.animation;
 using splatform.assets;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace splatform.tiles;
-internal class Tile {
+internal partial class Tile {
     //private vec2 _position;
     //private vec2 _drawPosition;
     //
@@ -33,19 +34,24 @@ internal class Tile {
     //    }
     //}
 
+    private AnimationState _animations = new();
+
     public vec2 Position { get; private set; }
     public vec2 DrawPosition { get; private set; }
 
     public Sprite Sprite { get; private set; } = new();
-
-    public required IntRect __debug_Slice { get; init; }
 
     public Tile () {
         Sprite.Texture = Assets.TileAtlas;
     }
 
     public virtual void OnStart () {
-        Sprite.TextureRect = __debug_Slice;
+        Sprite.TextureRect = _animations.CurrentAnimation.GetCurrentSlice(false);
+    }
+
+    public virtual void OnUpdate () {
+        _animations.OnUpdate(Time.DeltaTime, Time.TimeScale);
+        Sprite.TextureRect = _animations.CurrentAnimation.GetCurrentSlice(false);
     }
 
     /// <summary>

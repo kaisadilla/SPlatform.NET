@@ -67,10 +67,8 @@ internal class Game {
         SetupDebugInfo();
 
         Listener.GlobalVolume = 50f;
-
-        using StreamReader reader = new("res/data/levels-json/level1-1.sm-lev");
-        var levelJson = reader.ReadToEnd();
-        _scene = LevelScene.FromJson(levelJson);
+        
+        _scene = LevelScene.FromBinary("level1-1-goomba");
 
         _scene.SetWindowSizes((ivec2)_window.Size, new(2f, 2f));
         _scene.Init(_window);

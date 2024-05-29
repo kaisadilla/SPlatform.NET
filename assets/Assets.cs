@@ -149,13 +149,13 @@ internal static class Assets {
         Console.WriteLine("=== LOADING SOUNDS ===");
 
         Sounds = new() {
-            Sound_Pause = new(PATH_SOUNDS + "/pause.wav"),
-            Sound_Jump = new(PATH_SOUNDS + "/jump.wav"),
-            Sound_Stomp = new(PATH_SOUNDS + "/stomp.wav"),
-            Sound_Kick = new(PATH_SOUNDS + "/kick.wav"),
-            Sound_PlayerDeath = new(PATH_SOUNDS + "/player_death.wav"),
-            Sound_Coin = new(PATH_SOUNDS + "/coin.wav"),
-            Sound_ItemSpawn = new(PATH_SOUNDS + "/item_spawn.wav"),
+            Pause = new(PATH_SOUNDS + "/pause.wav"),
+            Jump = new(PATH_SOUNDS + "/jump.wav"),
+            Stomp = new(PATH_SOUNDS + "/stomp.wav"),
+            Kick = new(PATH_SOUNDS + "/kick.wav"),
+            PlayerDeath = new(PATH_SOUNDS + "/player_death.wav"),
+            Coin = new(PATH_SOUNDS + "/coin.wav"),
+            ItemSpawn = new(PATH_SOUNDS + "/item_spawn.wav"),
         };
     }
 
@@ -179,11 +179,11 @@ internal static class Assets {
 }
 
 internal class _SoundAssets {
-    public required SoundBuffer Sound_Pause { get; init; }
-    public required SoundBuffer Sound_Jump { get; init; }
-    public required SoundBuffer Sound_Stomp { get; init; }
-    public required SoundBuffer Sound_Kick { get; init; }
-    public required SoundBuffer Sound_PlayerDeath { get; init; }
-    public required SoundBuffer Sound_Coin { get; init; }
-    public required SoundBuffer Sound_ItemSpawn { get; init; }
+    public required SoundBuffer Pause { get; init; }
+    public required SoundBuffer Jump { get; init; }
+    public required SoundBuffer Stomp { get; init; }
+    public required SoundBuffer Kick { get; init; }
+    public required SoundBuffer PlayerDeath { get; init; }
+    public required SoundBuffer Coin { get; init; }
+    public required SoundBuffer ItemSpawn { get; init; }
 }
