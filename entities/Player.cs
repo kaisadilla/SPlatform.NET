@@ -94,6 +94,7 @@ internal class Player : Entity {
         _destroyWhenOutOfBounds = false;
         _sound_jump = new(Assets.Sounds!.Jump);
         _sound_death = new(Assets.Sounds!.PlayerDeath);
+        Collider = new(this);
     }
 
     public void __TEMP_initialize_animations () {

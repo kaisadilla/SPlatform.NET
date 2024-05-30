@@ -1,6 +1,8 @@
 ﻿using SFML.Graphics;
 using splatform.animation;
 using splatform.assets;
+using splatform.entities;
+using splatform.physics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,31 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace splatform.tiles;
-internal partial class Tile {
-    //private vec2 _position;
-    //private vec2 _drawPosition;
-    //
-    ///// <summary>
-    ///// The position of the tile inside its level.
-    ///// </summary>
-    //public required vec2 Position {
-    //    get => _position;
-    //    init {
-    //        _position = value;
-    //        DrawPosition = value;
-    //    }
-    //}
-    ///// <summary>
-    ///// The point in the level where the tile is drawn, which may or may not
-    ///// correspond to its actual position.
-    ///// </summary>
-    //public required vec2 DrawPosition {
-    //    get => _drawPosition;
-    //    init {
-    //        _drawPosition = value;
-    //        RecalculateSpritePosition();
-    //    }
-    //}
+internal partial class Tile : IGameObject {
+    public GameObjectType Type => GameObjectType.Tile;
 
     private AnimationState _animations = new();
 
@@ -40,6 +19,8 @@ internal partial class Tile {
     public vec2 DrawPosition { get; private set; }
 
     public Sprite Sprite { get; private set; } = new();
+
+    public Collider? Collider { get; private set; }
 
     public Tile () {
         Sprite.Texture = Assets.TileAtlas;
@@ -52,6 +33,19 @@ internal partial class Tile {
     public virtual void OnUpdate () {
         _animations.OnUpdate(Time.DeltaTime, Time.TimeScale);
         Sprite.TextureRect = _animations.CurrentAnimation.GetCurrentSlice(false);
+    }
+
+    public virtual bool HasMobCollider (Collision collision, vec2 mobVelocity) {
+        return true; // TODO
+    }
+
+    /// <summary>
+    /// An event that must be called manually by the Player class when necessary.
+    /// </summary>
+    /// <param name="collision">The collision that triggered this effect.</param>
+    /// <param name="player">The player that triggered this effect.</param>
+    public virtual void OnCollisionWithPlayer (Collision collision, Player player) {
+        // Nothing.
     }
 
     /// <summary>

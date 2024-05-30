@@ -115,6 +115,10 @@ internal partial class LevelScene : Scene {
         DrawLayer(window, _foregroundLayer);
         DrawPlayer(window);
 
+        if (Debug.DisplayColliders) {
+            DrawColliders(window);
+        }
+
         window.SetView(window.DefaultView);
     }
 
@@ -177,6 +181,14 @@ internal partial class LevelScene : Scene {
 
     private void DrawPlayer (RenderWindow window) {
         _player.Draw(window);
+    }
+
+    private void DrawColliders (RenderWindow window) {
+        foreach (var tile in _foregroundLayer) {
+            tile.Collider?.DrawColliderBounds(window);
+        }
+
+        _player.Collider.DrawColliderBounds(window);
     }
 
     private void __TEMP_initialize_player () {

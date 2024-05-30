@@ -3,6 +3,7 @@ using splatform.animation;
 using splatform.assets;
 using splatform.game.scenes;
 using splatform.physics;
+using splatform.tiles;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -111,7 +112,11 @@ internal partial class Entity : IGameObject {
     #endregion
 
     #region Collider members
-    // TODO: Physics
+    public Collider Collider { get; protected set; }
+    /// <summary>
+    /// If this value is greater than zero, collisions with entities are ignored.
+    /// </summary>
+    private float _ignoreEntityCollisionTimer = 0f;
     #endregion
 
     #region Animation members
@@ -182,8 +187,16 @@ internal partial class Entity : IGameObject {
         };
     }
 
-    public void SetColliderSize (IntRect collider) {
-        // TODO: Implement.
+    public void SetColliderSize (IntRect colliderPosition) {
+        Collider.CalculateVectorsInsideSprite(
+            _size,
+            colliderPosition,
+            out vec2 colliderCenter,
+            out vec2 colliderEdge
+        );
+
+        Collider.SetRelativeCenter(colliderCenter);
+        Collider.SetDistanceToEdge(colliderEdge);
     }
 
     public void SetLevel (LevelScene level) {
@@ -223,12 +236,20 @@ internal partial class Entity : IGameObject {
         Move(_velocity * deltaTime);
     }
 
-    public virtual void Move (vec2 direction) {
+    public void Move (vec2 direction) {
         SetPosition(new(_position.X + direction.X, _position.Y + direction.Y));
     }
 
-    public virtual void Move (float x, float y) {
+    public void Move (float x, float y) {
         SetPosition(new(_position.X + x, _position.Y + y));
+    }
+
+    public void CheckCollisionWithTiles (List<Tile> tiles, int startingIndex = 0) {
+
+    }
+
+    public void CheckCollisionWithEntities (List<Entity> entities, int startingIndex = 0) {
+
     }
     #endregion
 

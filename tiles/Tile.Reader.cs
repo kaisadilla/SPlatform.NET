@@ -128,7 +128,11 @@ internal partial class Tile {
         }
 
         if (generateCollider) {
-            // TODO: Colliders.
+            vec2 colPos = new(xPos * PIXELS_PER_TILE, yPos * PIXELS_PER_TILE);
+            vec2 colCenter = new(PIXELS_PER_TILE / 2f, PIXELS_PER_TILE / 2f);
+            vec2 colDistanceToEdge = new(PIXELS_PER_TILE / 2f, PIXELS_PER_TILE / 2f);
+
+            tile.Collider = new(tile, colPos, colCenter, colDistanceToEdge);
         }
 
         return tile;
