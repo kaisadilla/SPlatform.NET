@@ -127,8 +127,10 @@ internal class Game {
         if (evt.Code == Keyboard.Key.F1) {
             Time.PauseOrResume();
         }
+        // TODO: Remove from here, maybe?
         else if (evt.Code == Keyboard.Key.F2) {
-            // TODO: reset scene.
+            _scene.Close(_window);
+            Init(); // TODO This is temporary, Init() should never be called outside main.cs.
         }
         else if (evt.Code == Keyboard.Key.F3) {
             Debug.DisplayStats = !Debug.DisplayStats;

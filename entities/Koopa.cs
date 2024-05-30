@@ -41,7 +41,7 @@ internal class Koopa : Enemy {
     ) {
         _traits.Add(new AvoidCliffsTrait(this, avoidsCliffs, _size.Y));
         _canRevive = canRevive;
-        _isShell = playerCanGrabShell;
+        _playerCanGrabShell = playerCanGrabShell;
         _shellCollider = shellColliderPos;
     }
 
@@ -78,7 +78,7 @@ internal class Koopa : Enemy {
         Collision collision, Enemy enemy
     ) {
         if (_isShell) {
-            if (MathF.Abs(_velocity.X) > 0.1f) {
+            if (IsStill == false) {
                 enemy.TakeDamage(
                     true, collision.GetHorizontalDirectionFor(enemy)
                 );
@@ -92,7 +92,39 @@ internal class Koopa : Enemy {
     protected override void OnCollisionWithPlayer (
         Collision collision, Player player
     ) {
+        if (_isDead) return;
 
+        if (_isShell) {
+            if (IsStill) {
+                PushShell(collision.HorizontalDirection, collision.Intersection.X);
+            }
+            else {
+                if (IsBeingTrampledByPlayer(player.ColliderPosition)) {
+                    StopShell();
+                    player.JumpWithStompStrength();
+                }
+                else {
+                    player.TakeDamage(false);
+                }
+            }
+        }
+        else {
+            if (IsBeingTrampledByPlayer(player.ColliderPosition)) {
+                if (_canRevive) {
+                    TakeDamage(false);
+                    player.JumpWithStompStrength();
+                }
+                else {
+                    Die();
+                }
+
+                _sound_stomp.Play();
+                player.JumpWithStompStrength();
+            }
+            else {
+                player.TakeDamage(false);
+            }
+        }
     }
 
     public override void TakeDamage (
@@ -175,5 +207,11 @@ internal class Koopa : Enemy {
         _isReviving = false;
         _animations.SetState((int)AnimStates.SHELL_TRAVELING);
         _sound_kick.Play();
+    }
+
+    private void StopShell () {
+        _secondsUntilReviveStart = SECONDS_UNTIL_REVIVE_START;
+        _velocity.X = 0f;
+        _animations.SetState((int)AnimStates.SHELL);
     }
 }

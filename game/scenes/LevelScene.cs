@@ -153,7 +153,7 @@ internal partial class LevelScene : Scene {
     }
 
     public override void Close (RenderWindow window) {
-
+        _background.StopMusic();
     }
 
     private void DeleteDisposedObjects () {

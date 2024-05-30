@@ -150,6 +150,14 @@ internal class Player : Entity {
     public void EarnCoin () {
         // TODO
     }
+
+    /// <summary>
+    /// Makes the player jump with the strength it carries when it stomps an
+    /// enemy.
+    /// </summary>
+    public void JumpWithStompStrength () {
+        Jump(JUMP_ON_KILL_STRENGTH);
+    }
     #endregion
 
     #region Events

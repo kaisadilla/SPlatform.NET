@@ -14,6 +14,8 @@ using System.Threading.Tasks;
 
 namespace splatform.entities;
 internal abstract partial class Entity : IGameObject {
+    public const float JUMP_ON_KILL_STRENGTH = 16f * 16f;
+
     public abstract GameObjectType Type { get; }
 
     protected vec2 _size;
@@ -147,6 +149,12 @@ internal abstract partial class Entity : IGameObject {
     public FloatRect ColliderPosition => Collider.AbsoluteBounds;
     public bool CollidesWithEntities => _isDead == false
         && _ignoreEntityCollisionTimer <= 0f;
+
+    /// <summary>
+    /// Equals true when this entity's velocity is below a small threshold.
+    /// </summary>
+    public bool IsStill => MathF.Abs(_velocity.X) < 0.1f
+        && MathF.Abs(_velocity.Y) < 0.1f;
     #endregion
 
     public vec2 Velocity => _velocity;
@@ -501,6 +509,7 @@ internal abstract partial class Entity : IGameObject {
     /// <param name="collision">The collision with the tile.</param>
     /// <param name="walkingSpeed">This enemy's walking speed.</param>
     protected void WalkAwayFromTile (Collision collision, float walkingSpeed) {
+        // the tile was to the left of this entity.
         if (collision.Direction == Direction.Left) {
             _velocity.X = walkingSpeed;
         }
@@ -516,8 +525,9 @@ internal abstract partial class Entity : IGameObject {
     /// <param name="collision">The collision with the enemy.</param>
     /// <param name="walkingSpeed">This enemy's walking speed.</param>
     protected void WalkAwayFromEntity (Collision collision, float walkingSpeed) {
+        // this entity was to the left of the other entity.
         if (collision.GetDirectionFor(this) == Direction.Left) {
-            _velocity.X = walkingSpeed;
+            _velocity.X = -walkingSpeed;
         }
         else if (collision.GetDirectionFor(this) == Direction.Right) {
             _velocity.X = walkingSpeed;

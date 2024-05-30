@@ -52,7 +52,7 @@ internal class Goomba : Enemy {
         if (IsBeingTrampledByPlayer(player.ColliderPosition)) {
             TakeDamage(false);
             _sound_stomp.Play();
-            player.Jump(16f * 16f);
+            player.JumpWithStompStrength();
         }
         else {
             player.TakeDamage(false);

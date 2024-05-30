@@ -17,6 +17,13 @@ public static class Constants {
 
     public const float DEAD_ENEMY_DESPAWN_TIME = 0.25f;
 
+    /// <summary>
+    /// The maximum speed (in any axis) that an entity can carry while still
+    /// considered "still". This accounts for small errors where an entity
+    /// that is supposed to be still has a velocity slightly different to 0.
+    /// </summary>
+    public const float STILL_ENTITY_THRESHOLD = 0.1f;
+
     #region Paths
     public const string PATH_LEVELS = "res/data/levels";
     public const string PATH_REGISTRY = "res/data/registry.json";
