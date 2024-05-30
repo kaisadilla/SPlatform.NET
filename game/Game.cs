@@ -109,7 +109,7 @@ internal class Game {
         _window.Clear();
         _scene.DrawToWindow(_window);
 
-        if (Debug.ShowDebugInfo) {
+        if (Debug.DisplayStats) {
             DrawDebugInfo();
         }
 
@@ -131,13 +131,13 @@ internal class Game {
             // TODO: reset scene.
         }
         else if (evt.Code == Keyboard.Key.F3) {
-            Debug.ShowDebugInfo = !Debug.ShowDebugInfo;
+            Debug.DisplayStats = !Debug.DisplayStats;
         }
         else if (evt.Code == Keyboard.Key.F4) {
-            Debug.DisplayColliders = !Debug.DisplayColliders;
+            Debug.DrawColliders = !Debug.DrawColliders;
         }
         else if (evt.Code == Keyboard.Key.F5) {
-            Debug.ShowDebugShapes = !Debug.ShowDebugShapes;
+            Debug.DrawVisualInfo = !Debug.DrawVisualInfo;
         }
         else if (evt.Code == Keyboard.Key.F10) {
             if (_cappedFps) {

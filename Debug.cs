@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace splatform;
 internal static class Debug {
-    public static bool ShowDebugInfo { get; set; } = false;
-    public static bool DisplayColliders { get; set; } = false; // old name: drawCollisions
-    public static bool ShowDebugShapes { get; set; } = false; // old name: drawDebugInfo
+    public static bool DisplayStats { get; set; } = false;
+    public static bool DrawColliders { get; set; } = false; // old name: drawCollisions
+    public static bool DrawVisualInfo { get; set; } = false; // old name: drawDebugInfo
 }

@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace splatform.entities;
-internal partial class Entity {
+internal abstract partial class Entity {
     const long BEHAVIOR_ENEMY_START_INDEX = 1_000;
 
     private enum Behavior : long {
@@ -77,13 +77,21 @@ internal partial class Entity {
             );
         }
 
-        // TODO: contents of if (entity != nullptr)
+        entity.SetDefaultSizes(entitySize, spriteSize, collider);
+        entity.SetSprite((int)spriteIndex);
+
+        foreach (var anim in animations) {
+            entity._animations.AddAnimation(anim);
+        }
 
         if (hasLevelSettings) {
             int xPos = reader.ReadUInt16();
             int yPos = reader.ReadUInt16();
 
             bool startingDirectionRight = reader.ReadBoolean();
+
+            entity.SetGridPosition(new(xPos, yPos));
+            entity._startingDirectionRight = startingDirectionRight;
         }
 
         return entity;
@@ -150,25 +158,23 @@ internal partial class Entity {
         }
     }
 
-    private static Entity ReadNextSuperMushroom (BinaryReader reader) {
-        // TODO
+    private static SuperMushroom ReadNextSuperMushroom (BinaryReader reader) {
+        SuperMushroom mushroom = new();
 
         int effectOnPlayer = reader.ReadByte(); // discarded for now.
 
-        return new();
+        return mushroom;
     }
 
-    private static Entity ReadNextGoomba (BinaryReader reader) {
-        // TODO
-
+    private static Goomba ReadNextGoomba (BinaryReader reader) {
         bool avoidsCliffs = reader.ReadBoolean();
 
-        return new();
+        Goomba goomba = new(avoidsCliffs);
+
+        return goomba;
     }
 
-    private static Entity ReadNextKoopa (BinaryReader reader) {
-        // TODO
-
+    private static Koopa ReadNextKoopa (BinaryReader reader) {
         int shellColliderTop = reader.ReadByte();
         int shellColliderLeft = reader.ReadByte();
         int shellColliderWidth = reader.ReadByte();
@@ -178,13 +184,26 @@ internal partial class Entity {
         bool canRevive = reader.ReadBoolean();
         bool playerCanGrabShell = reader.ReadBoolean();
 
-        return new();
+        IntRect shellColliderPos = new(
+            shellColliderTop,
+            shellColliderLeft,
+            shellColliderWidth,
+            shellColliderHeight
+        );
+
+        Koopa koopa = new(
+            avoidsCliffs, canRevive, playerCanGrabShell, shellColliderPos
+        );
+
+        return koopa;
     }
 
     private static Entity ReadNextVenusFireTrap (BinaryReader reader) {
         int projectileCount = reader.ReadByte();
         bool canBeStomped = reader.ReadBoolean();
 
-        return new();
+        VenusFireTrap venus = new(projectileCount, canBeStomped);
+
+        return venus;
     }
 }

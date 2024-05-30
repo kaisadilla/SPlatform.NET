@@ -141,7 +141,9 @@ internal class Player : Entity {
         UpdateColliderDimensions();
     }
 
-    public void TakeDamage (bool forceDeath, Direction direction) {
+    public override void TakeDamage (
+        bool forceDeath, Direction direction = Direction.None
+    ) {
         Die();
     }
 

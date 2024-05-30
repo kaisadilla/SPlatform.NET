@@ -37,7 +37,9 @@ internal partial class LevelScene {
         int entityCount = reader.ReadUInt16();
 
         for (int i = 0; i < entityCount; i++) {
-            Entity.ReadNext(reader, true); // TODO: Entities
+            var entity = Entity.ReadNext(reader, true);
+            entity.SetLevel(this);
+            _entities.Add(entity);
         }
 
         Width = width;
@@ -53,9 +55,9 @@ internal partial class LevelScene {
     }
 
     public static LevelScene FromBinary (string fileName) {
-        #if DEBUG
+        //#if DEBUG
         Stopwatch s = Stopwatch.StartNew();
-        #endif
+        //#endif
 
         using FileStream stream = File.OpenRead(
             PATH_LEVELS + "/" + fileName + ".sm-binl"
@@ -64,10 +66,10 @@ internal partial class LevelScene {
 
         LevelScene level = new(reader);
 
-        #if DEBUG
+        //#if DEBUG
         s.Stop();
         Console.WriteLine($"Level loaded in {s.ElapsedMilliseconds} ms");
-        #endif
+        //#endif
 
         return level;
     }
