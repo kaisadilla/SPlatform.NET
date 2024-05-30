@@ -71,7 +71,7 @@ internal class Koopa : Enemy {
     protected override void OnCollisionWithTile (
         Collision collision, Tile tile
     ) {
-        WalkAwayFromTile(collision, MathF.Abs(_velocity.X));
+        WalkAwayFromTile(collision, _isShell ? SHELL_SPEED : WALKING_SPEED);
     }
 
     protected override void OnCollisionWithEnemy (
@@ -85,7 +85,7 @@ internal class Koopa : Enemy {
             }
         }
         else {
-            WalkAwayFromEntity(collision, MathF.Abs(_velocity.X));
+            WalkAwayFromEntity(collision, _isShell ? SHELL_SPEED : WALKING_SPEED);
         }
     }
 
