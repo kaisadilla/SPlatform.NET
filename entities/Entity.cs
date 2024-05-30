@@ -151,7 +151,7 @@ internal partial class Entity : IGameObject {
     #region Setters
     public void SetPosition (vec2 position) {
         _position = position;
-        //collider.setPosition(position);
+        Collider.SetPosition(position);
         _sprite.Position = PixelPosition + new vec2(0, 1);
     }
 
@@ -245,11 +245,75 @@ internal partial class Entity : IGameObject {
     }
 
     public void CheckCollisionWithTiles (List<Tile> tiles, int startingIndex = 0) {
+        const float COLLISION_THRESHOLD = 1.5f;
 
+        if (_ignoresTiles) return;
+
+        _isGrounded = false;
+
+        List<int> secondRound = new();
+
+        for (int i = startingIndex; i < tiles.Count; i++) {
+            var tile = tiles[i];
+
+            if (tile.Collider == null) continue;
+
+            if (Collider.CheckCollision(tile.Collider, out var collision) == false) {
+                continue;
+            }
+           
+            if (IsCollisionValid(collision, tile) == false) continue;
+
+            if (collision.Direction == Direction.Up || collision.Direction == Direction.Down) {
+                _collided = true;
+
+                if (_canGoThroughTiles == false) {
+                    if (MathF.Abs(collision.Intersection.X) > COLLISION_THRESHOLD) {
+                        Move(0, collision.Intersection.Y);
+                        _velocity.Y = 0f;
+
+                        if (collision.Direction == Direction.Down) {
+                            _isGrounded = true;
+                        }
+                    }
+                }
+
+                OnCollisionWithTile(collision, tile);
+            }
+            else if (collision.Direction == Direction.Left || collision.Direction == Direction.Right) {
+                secondRound.Add(i);
+            }
+        }
+
+        foreach (int i in secondRound) {
+            var tile = tiles[i];
+
+            if (tile.Collider == null) continue;
+            
+            if (Collider.CheckCollision(tile.Collider, out Collision collision)) {
+                if (IsCollisionValid(collision, tile) == false) continue;
+
+                _collided = true;
+
+                if (_canGoThroughTiles == false) {
+                    _velocity.X = 0f;
+
+                    if (MathF.Abs(collision.Intersection.Y) > COLLISION_THRESHOLD) {
+                        Move(collision.Intersection.X, 0);
+                    }
+                }
+
+                OnCollisionWithTile(collision, tile);
+            }
+        }
     }
 
     public void CheckCollisionWithEntities (List<Entity> entities, int startingIndex = 0) {
 
+    }
+
+    public bool IsCollisionValid (Collision collision, Tile tile) {
+        return tile.HasMobCollided(collision, _velocity);
     }
     #endregion
 
@@ -295,7 +359,29 @@ internal partial class Entity : IGameObject {
     }
 
     protected virtual void OnUpdate () {
+        _animations.OnUpdate(Time.DeltaTime, _animationSpeed);
 
+        var uvs = _animations.CurrentAnimation.GetCurrentSlice(
+            _isLookingLeft && _flipSpriteWhenLookingLeft
+        );
+
+        if (_flipHorizontal) {
+            uvs.Left += uvs.Width;
+            uvs.Width = -uvs.Width;
+        }
+        if (_flipVertical) {
+            uvs.Top += uvs.Height;
+            uvs.Height = -uvs.Height;
+        }
+
+        _sprite.TextureRect = uvs;
+
+        if (_isDead) {
+            _despawnTimer -= Time.DeltaTime;
+            if (_despawnTimer < 0f) {
+                Dispose();
+            }
+        }
     }
 
     protected virtual void OnFixedUpdate () {
@@ -303,6 +389,10 @@ internal partial class Entity : IGameObject {
 
         UpdatePhysics(SECONDS_PER_FIXED_UPDATE);
         CheckOutOfBounds();
+    }
+
+    protected virtual void OnCollisionWithTile (Collision collision, Tile tile) {
+
     }
 
     protected virtual void CheckOutOfBounds () {

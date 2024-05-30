@@ -35,7 +35,7 @@ internal partial class Tile : IGameObject {
         Sprite.TextureRect = _animations.CurrentAnimation.GetCurrentSlice(false);
     }
 
-    public virtual bool HasMobCollider (Collision collision, vec2 mobVelocity) {
+    public virtual bool HasMobCollided (Collision collision, vec2 mobVelocity) {
         return true; // TODO
     }
 

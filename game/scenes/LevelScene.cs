@@ -17,17 +17,7 @@ internal partial class LevelScene : Scene {
     public int Height { get; private set; }
     public float TimeLeft { get; private set; }
 
-    /************************
-     * BACKGROUND AND MUSIC *
-     ************************/
-    // TODO: Move everything except music to a background class.
-    private float _backgroundParallaxMaxX = 0;
-    private float _backgroundParallaxMaxY = 0;
-    private float _levelParallaxMaxX = 0;
-    private float _levelParallaxMaxY = 0;
-    private Texture _backgroundTexture = new(1, 1);
-    private Sprite _backgroundImage = new(); // TODO: Multiple backgrounds.
-    private Music? _music;
+    private Background _background;
 
     private List<Tile> _backgroundLayer = new();
     private List<Tile> _foregroundLayer = new();
@@ -54,12 +44,17 @@ internal partial class LevelScene : Scene {
         (int)(WindowSize.Y / WindowZoom.Y)
     );
 
+    public LevelScene () {
+
+    }
+
     public override void Init (Game game, RenderWindow window) {
         _game = game;
 
         InitializeBackground();
         __TEMP_initialize_player();
 
+        _background.SetWindowContext(WindowSize);
         _camera = new(new(PixelWidth, PixelHeight), ViewSize);
     }
 
@@ -71,44 +66,45 @@ internal partial class LevelScene : Scene {
         foreach (var tile in _foregroundLayer) {
             tile.OnStart();
         }
+
+        _background.PlayMusic();
     }
 
     public override void Update () {
         TimeLeft -= Time.DeltaTime;
 
-        // update layers.
+        foreach (var tile in _backgroundLayer) {
+            tile.OnUpdate();
+        }
+        foreach (var tile in _foregroundLayer) {
+            tile.OnUpdate();
+        }
+        foreach (var tile in _detailLayer) {
+            tile.OnUpdate();
+        }
+        foreach (var tile in _frontLayer) {
+            tile.OnUpdate();
+        }
 
         _player.Update();
         _camera.UpdatePosition(_player.PixelPosition);
+        _background.Update(_camera.TopLeft);
 
-        //DeleteDisposedObjects();
-        UpdateBackgroundPosition();
-
-        // TODO: Remove
-        //if (Keyboard.IsKeyPressed(Keyboard.Key.A)) {
-        //    __temp_playerPos.X -= 1;
-        //}
-        //if (Keyboard.IsKeyPressed(Keyboard.Key.D)) {
-        //    __temp_playerPos.X += 1;
-        //}
-        //if (Keyboard.IsKeyPressed(Keyboard.Key.W)) {
-        //    __temp_playerPos.Y -= 1;
-        //}
-        //if (Keyboard.IsKeyPressed(Keyboard.Key.S)) {
-        //    __temp_playerPos.Y += 1;
-        //}
+        DeleteDisposedObjects();
     }
 
     public override void FixedUpdate () {
         _player.FixedUpdate();
+        _player.CheckCollisionWithTiles(_foregroundLayer);
+        //_player.CheckCollisionWithEntities()
     }
 
     public override void LateUpdate () {
 
     }
 
-    public override void DrawTo (RenderWindow window) {
-        window.Draw(_backgroundImage);
+    public override void DrawToWindow (RenderWindow window) {
+        _background.Draw(window);
 
         window.SetView(_camera.View);
         DrawLayer(window, _backgroundLayer);
@@ -130,42 +126,11 @@ internal partial class LevelScene : Scene {
 
     }
 
-    private void LoadBackground (string name) {
-        _backgroundTexture = new(PATH_BACKGROUND_IMAGES + "/" + name + ".png");
-        _backgroundImage.Texture = _backgroundTexture;
-        _backgroundImage.Scale = new(2f, 2f); // TODO: window scale
-    }
+    private void DeleteDisposedObjects () {
 
-    private void LoadMusic (string name) {
-        _music = new(PATH_MUSIC + "/" + name + ".wav");
-        _music.Loop = true;
-        _music.Volume = 50f; // TODO: Dynamic??
     }
 
     private void InitializeBackground () {
-        // TODO: This is hardcoded to scale to 2x zoom.
-        var bgSize = _backgroundTexture.Size;
-        // TODO: Will underflow if the size of the window is bigger than the
-        // size of the background texture. / ???
-        _backgroundParallaxMaxX = bgSize.X - (WindowSize.X / 2);
-        _backgroundParallaxMaxY = bgSize.Y - (WindowSize.Y / 2);
-        _levelParallaxMaxX = PixelWidth - (WindowSize.X / 2);
-        _levelParallaxMaxY = PixelHeight - (WindowSize.Y / 2);
-    }
-
-    private void UpdateBackgroundPosition () {
-        var topLeft = _camera.TopLeft;
-
-        int xTop = (int)float.Lerp(
-            0, _backgroundParallaxMaxX, topLeft.X / _levelParallaxMaxX
-        );
-        int yTop = (int)float.Lerp(
-            0, _backgroundParallaxMaxY, topLeft.Y / _levelParallaxMaxY
-        );
-
-        _backgroundImage.TextureRect = new(
-            xTop, yTop, WindowSize.X / 2, WindowSize.Y / 2
-         );
     }
 
     /// <summary>

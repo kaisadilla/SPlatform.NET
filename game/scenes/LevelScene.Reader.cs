@@ -12,20 +12,11 @@ using System.Threading.Tasks;
 
 namespace splatform.game.scenes;
 internal partial class LevelScene {
-
-    public static LevelScene FromBinary (string fileName) {
-        #if DEBUG
-        Stopwatch s = Stopwatch.StartNew();
-        #endif
-
-        using FileStream stream = File.OpenRead(
-            PATH_LEVELS + "/" + fileName + ".sm-binl"
-        );
-
-        BinaryReader reader = new(stream);
-
-        LevelScene level = new();
-
+    /// <summary>
+    /// Creates a LevelScene from the binary data given by the reader.
+    /// </summary>
+    /// <param name="reader"></param>
+    public LevelScene (BinaryReader reader) {
         int fileType = reader.ReadByte();
         int versionMajor = reader.ReadByte();
         int versionMinor = reader.ReadByte();
@@ -38,24 +29,40 @@ internal partial class LevelScene {
         int music = reader.ReadUInt16();
         int time = reader.ReadUInt16();
 
-        level._backgroundLayer = ReadLayer(reader, false);
-        level._foregroundLayer = ReadLayer(reader, true);
-        level._detailLayer = ReadLayer(reader, false);
-        level._frontLayer = ReadLayer(reader, false);
+        _backgroundLayer = ReadLayer(reader, false);
+        _foregroundLayer = ReadLayer(reader, true);
+        _detailLayer = ReadLayer(reader, false);
+        _frontLayer = ReadLayer(reader, false);
 
         int entityCount = reader.ReadUInt16();
-        
+
         for (int i = 0; i < entityCount; i++) {
             Entity.ReadNext(reader, true); // TODO: Entities
         }
 
-        level.Width = width;
-        level.Height = height;
+        Width = width;
+        Height = height;
+        TimeLeft = time;
 
-        level.LoadBackground(Assets.GetBackgroundImageAt(background));
-        level.LoadMusic(Assets.GetMusicAt(music));
-        
-        level.TimeLeft = time;
+        _background = new(
+            Assets.GetBackgroundImageAt(background),
+            Assets.GetMusicAt(music),
+            new(PixelWidth, PixelHeight)
+        );
+
+    }
+
+    public static LevelScene FromBinary (string fileName) {
+        #if DEBUG
+        Stopwatch s = Stopwatch.StartNew();
+        #endif
+
+        using FileStream stream = File.OpenRead(
+            PATH_LEVELS + "/" + fileName + ".sm-binl"
+        );
+        using BinaryReader reader = new(stream);
+
+        LevelScene level = new(reader);
 
         #if DEBUG
         s.Stop();
@@ -66,27 +73,28 @@ internal partial class LevelScene {
     }
 
     public static LevelScene FromJson (string json) {
-        LevelData? data = JsonConvert.DeserializeObject<LevelData>(json);
-
-        if (data == null) {
-            throw new Exception("Couldn't read json file.");
-        }
-
-        LevelScene scene = new() {
-            Width = data.Width,
-            Height = data.Height,
-            _backgroundLayer = ReadJsonLayer(
-                data.Grids.Background, data.Width, data.Height, false
-            ),
-            _foregroundLayer = ReadJsonLayer(
-                data.Grids.Foreground, data.Width, data.Height, false
-            ),
-        };
-
-        scene.LoadBackground(data.Background);
-        scene.LoadMusic(data.Music);
-
-        return scene;
+        throw new NotImplementedException();
+        //LevelData? data = JsonConvert.DeserializeObject<LevelData>(json);
+        //
+        //if (data == null) {
+        //    throw new Exception("Couldn't read json file.");
+        //}
+        //
+        //LevelScene scene = new() {
+        //    Width = data.Width,
+        //    Height = data.Height,
+        //    _backgroundLayer = ReadJsonLayer(
+        //        data.Grids.Background, data.Width, data.Height, false
+        //    ),
+        //    _foregroundLayer = ReadJsonLayer(
+        //        data.Grids.Foreground, data.Width, data.Height, false
+        //    ),
+        //};
+        //
+        //scene.LoadBackground(data.Background);
+        //scene.LoadMusic(data.Music);
+        //
+        //return scene;
     }
 
     private static List<Tile> ReadLayer (

@@ -3,6 +3,7 @@ using SFML.Window;
 using splatform.animation;
 using splatform.assets;
 using splatform.physics;
+using splatform.tiles;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -164,6 +165,14 @@ internal class Player : Entity {
         base.OnFixedUpdate();
         CheckLevelBoundaries();
     }
+
+    protected override void OnCollisionWithTile (Collision collision, Tile tile) {
+        if (collision.Direction == Direction.Up) {
+            PlayerJumpEnd(true);
+        }
+
+        tile.OnCollisionWithPlayer(collision, this);
+    }
     #endregion
 
     #region Input
@@ -179,7 +188,7 @@ internal class Player : Entity {
         if (Keyboard.IsKeyPressed(Keyboard.Key.C)) {
             maxSpeed *= 1.555f; // Original goes from 18 to 28, which is ~1.555...
         }
-        // almost freeze for debug
+        // almost freeze for debug TODO: Remove?
         if (Keyboard.IsKeyPressed(Keyboard.Key.LControl)) {
             // maxSpeed = 2f;
         }
@@ -199,7 +208,7 @@ internal class Player : Entity {
                 acc *= 2f;
             }
 
-            _velocity.X = MathF.Min(-maxSpeed, _velocity.X - acc);
+            _velocity.X = MathF.Min(maxSpeed, _velocity.X + acc);
         }
         else {
             if (_isGrounded) {

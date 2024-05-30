@@ -45,7 +45,7 @@ internal abstract class Scene {
     /// Draws the contents of the scene to the given window.
     /// </summary>
     /// <param name="window">The window to draw to.</param>
-    public abstract void DrawTo(RenderWindow window);
+    public abstract void DrawToWindow(RenderWindow window);
     /// <summary>
     /// Processes keyboard events. Note that some input is read directly from
     /// the keyboard each update and not triggered by keyboard events.

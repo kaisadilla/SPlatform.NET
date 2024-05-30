@@ -107,7 +107,7 @@ internal class Game {
 
     public void Draw () {
         _window.Clear();
-        _scene.DrawTo(_window);
+        _scene.DrawToWindow(_window);
 
         if (Debug.ShowDebugInfo) {
             DrawDebugInfo();

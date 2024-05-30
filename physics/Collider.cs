@@ -97,9 +97,9 @@ internal class Collider {
         // Check if the sum of both colliders' distances to their respective
         // edges is higher than the distance between their centers.
         float xIntersect = MathF.Abs(xDelta)
-            - (_distanceToEdge.X - collider._distanceToEdge.X);
+            - (_distanceToEdge.X + collider._distanceToEdge.X);
         float yIntersect = MathF.Abs(yDelta)
-            - (_distanceToEdge.Y - collider._distanceToEdge.Y);
+            - (_distanceToEdge.Y + collider._distanceToEdge.Y);
 
         bool wasCollision = xIntersect < 0f && yIntersect < 0f;
 

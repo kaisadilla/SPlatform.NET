@@ -9,7 +9,6 @@ using splatform.game;
 // Must be loaded before doing anything else.
 Assets.LoadData();
 Time.Start();
-Time.SetTimeScale(0.1f);
 
 Game game = new();
 game.Init();
