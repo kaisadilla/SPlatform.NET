@@ -1,4 +1,5 @@
-﻿using SFML.Graphics;
+﻿using Betwixt;
+using SFML.Graphics;
 using splatform.animation;
 using splatform.assets;
 using splatform.entities.traits;
@@ -118,7 +119,7 @@ internal abstract partial class Entity : IGameObject {
 
     #region Animation members
     protected bool _playingAnim = false;
-    // TODO: protected TweenAnimation<float> _anim_getFromBlock;
+    protected TweenAnimation<float> _anim_getFromBlock;
     #endregion
 
     public int Id { get; protected set; } = -1;
@@ -234,7 +235,7 @@ internal abstract partial class Entity : IGameObject {
             }
         }
         if (_playingAnim) {
-            // anim tween stuff
+            _anim_getFromBlock.Update(v => SetPosition(new(_position.X, v)));
         }
     }
 
@@ -373,7 +374,22 @@ internal abstract partial class Entity : IGameObject {
 
     #region Animations
     public void PlayAnim_GetFromBlock () {
-        // todo
+        _isUpdated = false;
+        _playingAnim = true;
+        DrawBeforeForeground = true;
+        var yNow = _position.Y;
+
+        _anim_getFromBlock = new(
+            new Tweener<float>(_position.Y, _position.Y - 16, 0.75),
+            false,
+            () => {
+                DrawBeforeForeground = false;
+                _playingAnim = false;
+                _isUpdated = true;
+                //_anim_getFromBlock.Reset(); // TODO: enabling this makes the entity return to its initial position.
+            }
+        );
+        _anim_getFromBlock.Play();
     }
     #endregion
 

@@ -7,7 +7,7 @@ internal abstract class Scene {
 
     // TODO: Remove both of these from here, keep it in Game class.
     public ivec2 WindowSize { get; protected set; }
-    public vec2 WindowZoom { get; protected set; }
+    public int WindowZoom { get; protected set; }
 
     /// <summary>
     /// Initializes all the necessary objects to run the scene.
@@ -58,7 +58,7 @@ internal abstract class Scene {
     /// </summary>
     /// <param name="size"></param>
     /// <param name="zoom"></param>
-    public void SetWindowSizes (ivec2 size, vec2 zoom) {
+    public void SetWindowSizes (ivec2 size, int zoom) {
         WindowSize = size;
         WindowZoom = zoom;
     }

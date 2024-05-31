@@ -186,15 +186,15 @@ internal class Player : Entity {
             _jumpBufferTime -= Time.DeltaTime;
         }
 
+
+
         float acc = ACCELERATION_X * Time.DeltaTime;
         float maxSpeed = MAX_SPEED_X;
 
         // sprinting
         if (Keyboard.IsKeyPressed(Keyboard.Key.C)) {
-            maxSpeed *= 1.555f; // Original goes from 18 to 28, which is ~1.555...
-        }
-        if (_isGrounded == false) {
-            acc *= 0.75f;
+            //maxSpeed *= 1.555f; // Original goes from 18 to 28, which is ~1.555...
+            maxSpeed *= 1.64f;
         }
 
         if (Keyboard.IsKeyPressed(Keyboard.Key.Left)) {
@@ -278,7 +278,8 @@ internal class Player : Entity {
             PlayerJumpEnd(false);
         }
         else {
-            _velocity.Y = (-16f * 4f) / 0.4f;
+            //_velocity.Y = (-16f * 4f) / 0.4f;
+            _velocity.Y = (MathF.Min(-MAX_SPEED_X / 5.5f, -MathF.Abs(_velocity.X) / 7.5f) * 4f) / 0.4f; // Temporary
         }
     }
 
@@ -298,29 +299,14 @@ internal class Player : Entity {
 
     #region Overrides
     protected override void CheckLookingLeft () {
-        base.CheckLookingLeft();
-
-        // TODO: This could probably be simplified as "the player is always
-        // looking in the direction he's pressing".
-
-        if (_isGrounded) {
-            // When skidding, the player is looking at the direction he's trying to move in.
-            if (_velocity.X < 0f && Keyboard.IsKeyPressed(Keyboard.Key.Right)) {
-                _isLookingLeft = false;
-            }
-            else if (_velocity.X > 0f && Keyboard.IsKeyPressed(Keyboard.Key.Left)) {
-                _isLookingLeft = true;
-            }
+        // the player is always looking in the last direction he pressed.
+        // when he's not pressing any key, he doesn't change the direction he's
+        // looking at even if he's currently walking backwards.
+        if (Keyboard.IsKeyPressed(Keyboard.Key.Left)) {
+            _isLookingLeft = true;
         }
-        // when airborne, the player is looking at the direction he's trying
-        // to look at.
-        else {
-            if (Keyboard.IsKeyPressed(Keyboard.Key.Left)) {
-                _isLookingLeft = true;
-            }
-            else if (Keyboard.IsKeyPressed(Keyboard.Key.Right)) {
-                _isLookingLeft = false;
-            }
+        else if (Keyboard.IsKeyPressed(Keyboard.Key.Right)) {
+            _isLookingLeft = false;
         }
     }
     #endregion

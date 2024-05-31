@@ -18,6 +18,9 @@ internal partial class LevelScene : Scene {
     private List<Tile> _detailLayer = new();
     private List<Tile> _frontLayer = new();
 
+    // TODO: split this into two lists: one with enemies that haven't been
+    // spawned yet, and another with active entities. Enemies spawn when
+    // mario gets close enough to their initial location (in the x coordinate)
     private List<Entity> _entities = new();
     private List<Particle> _particles = new();
 
@@ -37,8 +40,8 @@ internal partial class LevelScene : Scene {
     /// pixels. In practice, this is equal to WindowSize / WindowZoom.
     /// </summary>
     public ivec2 ViewSize => new(
-        (int)(WindowSize.X / WindowZoom.X),
-        (int)(WindowSize.Y / WindowZoom.Y)
+        (int)(WindowSize.X / WindowZoom),
+        (int)(WindowSize.Y / WindowZoom)
     );
 
     public LevelScene () {
@@ -50,7 +53,7 @@ internal partial class LevelScene : Scene {
 
         __TEMP_initialize_player();
 
-        _background.SetWindowContext(WindowSize);
+        _background.SetWindowContext(WindowSize, WindowZoom);
         _camera = new(new(PixelWidth, PixelHeight), ViewSize);
     }
 

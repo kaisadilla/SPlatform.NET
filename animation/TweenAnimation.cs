@@ -69,7 +69,6 @@ internal class TweenAnimation<T> {
                     if (_loop == false) {
                         _animating = false;
                     }
-                    Console.WriteLine("Last tween's end");
                     _endCallback?.Invoke();
                 };
             }

@@ -20,7 +20,7 @@ internal class Background {
         _backgroundTexture = new(PATH_BACKGROUND_IMAGES + "/" + bgName + ".png");
         _backgroundImage = new() {
             Texture = _backgroundTexture,
-            Scale = new(2f, 2f) // TODO: window scale
+            Scale = new(2f, 2f) // TODO: hardcoded scale
         };
 
         _music = new(PATH_MUSIC + "/" + musicName + ".wav") {
@@ -31,10 +31,13 @@ internal class Background {
         _sceneSize = sceneSize;
     }
 
-    public void SetWindowContext (ivec2 windowSize) {
+    public void SetWindowContext (ivec2 windowSize, int zoom) {
         _windowSize = windowSize;
+        _backgroundImage = new() {
+            Texture = _backgroundTexture,
+            Scale = new(zoom, zoom)
+        };
 
-        // TODO: This is hardcoded to scale to 2x zoom.
         var bgSize = _backgroundTexture.Size;
         // TODO: Will underflow if the size of the window is bigger than the
         // size of the background texture. / ???
