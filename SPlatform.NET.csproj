@@ -6,11 +6,16 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <RootNamespace>splatform</RootNamespace>
+    <Configurations>Debug;Release;Debug - stop FixedUpdate</Configurations>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug - stop FixedUpdate|AnyCPU'">
+    <DefineConstants>$(DefineConstants);NO_MULTI_FIXED_UPDATE</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Betwixt" Version="1.4.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="Retromono.Tweens" Version="1.0.1" />
     <PackageReference Include="SFML.Net" Version="2.5.1" />
   </ItemGroup>
 

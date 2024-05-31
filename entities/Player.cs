@@ -198,10 +198,6 @@ internal class Player : Entity {
         if (Keyboard.IsKeyPressed(Keyboard.Key.C)) {
             maxSpeed *= 1.555f; // Original goes from 18 to 28, which is ~1.555...
         }
-        // almost freeze for debug TODO: Remove?
-        if (Keyboard.IsKeyPressed(Keyboard.Key.LControl)) {
-            // maxSpeed = 2f;
-        }
         if (_isGrounded == false) {
             acc *= 0.75f;
         }
@@ -280,27 +276,27 @@ internal class Player : Entity {
     }
 
     public void PlayerJump () {
-        if (_isJumping) {
-            _jumpTime += Time.DeltaTime;
-            if (_jumpTime > _jumpMaxTime) {
-                PlayerJumpEnd(false);
-            }
-            else {
-                _velocity.Y = (-16f * 4f) / 0.4f;
-            }
+        if (_isJumping == false) return;
+
+        _jumpTime += Time.DeltaTime;
+        if (_jumpTime > _jumpMaxTime) {
+            PlayerJumpEnd(false);
+        }
+        else {
+            _velocity.Y = (-16f * 4f) / 0.4f;
         }
     }
 
     public void PlayerJumpEnd (bool forced) {
-        if (_isJumping) {
-            if (forced == false && _jumpTime < _jumpMinTime) {
-                PlayerJump();
-            }
-            else {
-                _gravityScale = 1f;
-                _isJumping = false;
-                _jumpTime = 0f;
-            }
+        if (_isJumping == false) return;
+
+        if (forced == false && _jumpTime < _jumpMinTime) {
+            PlayerJump();
+        }
+        else {
+            _gravityScale = 1f;
+            _isJumping = false;
+            _jumpTime = 0f;
         }
     }
     #endregion
@@ -345,6 +341,7 @@ internal class Player : Entity {
         else if (_position.X > _level.PixelWidth - _size.Y) {
             _position.X = _level.PixelWidth - _size.Y;
         }
+        // TODO: Vertical boundaries.
     }
 
     private void SetAnimationState () {

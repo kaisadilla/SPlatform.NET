@@ -81,10 +81,17 @@ internal class Game {
     public void Update () {
         _cumulativeFixedTime += Time.DeltaTime;
 
+        #if NO_MULTI_FIXED_UPDATE // Allows the program to be stopped without physics being recalculated later.
+        if (_cumulativeFixedTime > SECONDS_PER_FIXED_UPDATE) {
+            FixedUpdate();
+            _cumulativeFixedTime = 0f;
+        }
+        #else
         while (_cumulativeFixedTime > SECONDS_PER_FIXED_UPDATE) {
             FixedUpdate();
             _cumulativeFixedTime -= SECONDS_PER_FIXED_UPDATE;
         }
+        #endif
 
         UpdateFps();
         _window.DispatchEvents();

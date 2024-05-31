@@ -119,7 +119,7 @@ internal abstract partial class Entity : IGameObject {
     /// <summary>
     /// If this value is greater than zero, collisions with entities are ignored.
     /// </summary>
-    private float _ignoreEntityCollisionTimer = 0f;
+    protected float _ignoreEntityCollisionTimer = 0f;
     #endregion
 
     #region Animation members
@@ -341,7 +341,7 @@ internal abstract partial class Entity : IGameObject {
                 if (_canGoThroughTiles == false) {
                     _velocity.X = 0f;
 
-                    if (MathF.Abs(collision.Intersection.Y) > COLLISION_THRESHOLD) {
+                    if (MathF.Abs(collision.Intersection.X) > COLLISION_THRESHOLD) {
                         Move(collision.Intersection.X, 0);
                     }
                 }
@@ -396,7 +396,7 @@ internal abstract partial class Entity : IGameObject {
 
     #region Actions
     public void Jump (float strength) {
-        _velocity.Y -= strength;
+        _velocity.Y = -strength;
     }
 
     public abstract void TakeDamage (
@@ -444,7 +444,12 @@ internal abstract partial class Entity : IGameObject {
     }
 
     protected virtual void OnFixedUpdate () {
-        // if (ignoreEntityCollisionTimer > 0.f)
+        if (_ignoreEntityCollisionTimer > 0f) {
+            _ignoreEntityCollisionTimer = MathF.Max(
+                0,
+                _ignoreEntityCollisionTimer - SECONDS_PER_FIXED_UPDATE
+            );
+        }
 
         // TODO: This should be in FixedUpdate
         UpdatePhysics(SECONDS_PER_FIXED_UPDATE);
