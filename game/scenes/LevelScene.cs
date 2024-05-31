@@ -1,15 +1,8 @@
-﻿using SFML.Audio;
-using SFML.Graphics;
-using SFML.System;
+﻿using SFML.Graphics;
 using SFML.Window;
 using splatform.entities;
 using splatform.player;
 using splatform.tiles;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace splatform.game.scenes;
 internal partial class LevelScene : Scene {

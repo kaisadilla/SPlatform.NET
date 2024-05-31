@@ -5,12 +5,6 @@ using splatform.entities.traits;
 using splatform.game.scenes;
 using splatform.physics;
 using splatform.tiles;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace splatform.entities;
 internal abstract partial class Entity : IGameObject {

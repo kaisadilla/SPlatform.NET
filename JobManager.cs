@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace splatform;
+﻿namespace splatform;
 internal static class JobManager {
     private static List<Job> _pendingJobs = new();
 

@@ -1,9 +1,4 @@
 ﻿using splatform.physics;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace splatform.entities;
 internal class Item : Entity {

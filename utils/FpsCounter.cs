@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace splatform.utils;
+﻿namespace splatform.utils;
 internal class FpsCounter {
     /// <summary>
     /// True if this counter was updated in the last frame.

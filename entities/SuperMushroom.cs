@@ -1,10 +1,5 @@
 ﻿using splatform.physics;
 using splatform.tiles;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace splatform.entities;
 internal class SuperMushroom : Item {

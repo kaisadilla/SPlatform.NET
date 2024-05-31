@@ -1,11 +1,5 @@
 ﻿using SFML.Audio;
 using SFML.Graphics;
-using splatform.player;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace splatform.game;
 internal class Background {

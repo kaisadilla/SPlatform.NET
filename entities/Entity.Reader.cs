@@ -1,10 +1,5 @@
 ﻿using SFML.Graphics;
 using splatform.animation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace splatform.entities;
 internal abstract partial class Entity {

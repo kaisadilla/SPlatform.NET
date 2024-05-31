@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace splatform.physics;
+﻿namespace splatform.physics;
 internal class Collision {
     /// <summary>
     /// The collider of the object this one collided with.

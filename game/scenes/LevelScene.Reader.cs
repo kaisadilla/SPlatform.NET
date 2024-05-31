@@ -1,14 +1,7 @@
-﻿using Newtonsoft.Json;
-using splatform.assets;
-using splatform.assets.data;
+﻿using splatform.assets;
 using splatform.entities;
 using splatform.tiles;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace splatform.game.scenes;
 internal partial class LevelScene {

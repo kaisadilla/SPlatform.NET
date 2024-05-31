@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace splatform.assets.data;
+﻿namespace splatform.assets.data;
 // TODO: this is for JSON files only, maybe has a purpose in testing stuff.
 internal class LevelData {
     public required int Width { get; init; }

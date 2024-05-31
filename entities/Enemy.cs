@@ -2,12 +2,6 @@
 using SFML.Graphics;
 using splatform.assets;
 using splatform.physics;
-using splatform.tiles;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace splatform.entities;
 internal abstract class Enemy : Entity {

@@ -1,12 +1,6 @@
-﻿using SFML.Graphics;
-using splatform.entities.traits;
+﻿using splatform.entities.traits;
 using splatform.physics;
 using splatform.tiles;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace splatform.entities;
 internal class Goomba : Enemy {
