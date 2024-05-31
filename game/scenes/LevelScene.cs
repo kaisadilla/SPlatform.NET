@@ -1,6 +1,7 @@
 ﻿using SFML.Graphics;
 using SFML.Window;
 using splatform.entities;
+using splatform.particles;
 using splatform.player;
 using splatform.tiles;
 
@@ -18,6 +19,7 @@ internal partial class LevelScene : Scene {
     private List<Tile> _frontLayer = new();
 
     private List<Entity> _entities = new();
+    private List<Particle> _particles = new();
 
     private Player _player = new();
     private Camera _camera = new(new(1, 1), new(1, 1));
@@ -91,6 +93,9 @@ internal partial class LevelScene : Scene {
         foreach (var entity in _entities) {
             entity.Update();
         }
+        foreach (var particle in _particles) {
+            particle.Update();
+        }
 
         _player.Update();
         _camera.UpdatePosition(_player.PixelPosition);
@@ -130,6 +135,7 @@ internal partial class LevelScene : Scene {
         DrawLayer(window, _detailLayer);
         DrawLayer(window, _frontLayer);
         DrawPlayer(window);
+        DrawParticles(window);
 
         if (Debug.DrawColliders) {
             DrawColliders(window);
@@ -149,10 +155,27 @@ internal partial class LevelScene : Scene {
         _background.StopMusic();
     }
 
+    public void InstantiateEntity (Entity entity) {
+        entity.SetLevel(this);
+        entity.Start();
+        _entities.Add(entity);
+    }
+
+    public void InstantiateParticle (Particle particle) {
+        particle.Start();
+        _particles.Add(particle);
+    }
+
     private void DeleteDisposedObjects () {
         for (int i = _entities.Count - 1; i >= 0; i--) {
             if (_entities[i].DisposePending) {
                 _entities.RemoveAt(i);
+            }
+        }
+
+        for (int i = _particles.Count - 1; i >= 0; i--) {
+            if (_particles[i].DisposePending) {
+                _particles.RemoveAt(i);
             }
         }
     }
@@ -185,6 +208,12 @@ internal partial class LevelScene : Scene {
 
     private void DrawPlayer (RenderWindow window) {
         _player.Draw(window);
+    }
+
+    private void DrawParticles (RenderWindow window) {
+        foreach (var particle in _particles) {
+            particle.Draw(window);
+        }
     }
 
     private void DrawColliders (RenderWindow window) {

@@ -170,6 +170,10 @@ internal abstract partial class Entity : IGameObject {
             position.Y * PIXELS_PER_TILE
         ));
     }
+
+    public void SetStartingDirectionRight (bool right) {
+        _startingDirectionRight = right;
+    }
     #endregion
 
     #region Initialization
@@ -335,7 +339,9 @@ internal abstract partial class Entity : IGameObject {
                 if (_canGoThroughTiles == false) {
                     _velocity.X = 0f;
 
-                    if (MathF.Abs(collision.Intersection.X) > COLLISION_THRESHOLD) {
+                    // Prevent unexpected hits from the side by checking its
+                    // vertical component is above a certain threshold.
+                    if (MathF.Abs(collision.Intersection.Y) > COLLISION_THRESHOLD) {
                         Move(collision.Intersection.X, 0);
                     }
                 }

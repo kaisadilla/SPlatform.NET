@@ -22,10 +22,10 @@ internal partial class LevelScene {
         int music = reader.ReadUInt16();
         int time = reader.ReadUInt16();
 
-        _backgroundLayer = ReadLayer(reader, false);
-        _foregroundLayer = ReadLayer(reader, true);
-        _detailLayer = ReadLayer(reader, false);
-        _frontLayer = ReadLayer(reader, false);
+        _backgroundLayer = ReadLayer(reader, this, false);
+        _foregroundLayer = ReadLayer(reader, this, true);
+        _detailLayer = ReadLayer(reader, this, false);
+        _frontLayer = ReadLayer(reader, this, false);
 
         int entityCount = reader.ReadUInt16();
 
@@ -93,13 +93,14 @@ internal partial class LevelScene {
     }
 
     private static List<Tile> ReadLayer (
-        BinaryReader reader, bool generateColliders
+        BinaryReader reader, LevelScene level, bool generateColliders
     ) {
         uint tileCount = reader.ReadUInt32();
         List<Tile> tiles = new();
 
         for (int i = 0; i < tileCount; i++) {
             Tile tile = Tile.ReadNext(reader, generateColliders);
+            tile.SetLevel(level);
             tiles.Add(tile);
         }
 

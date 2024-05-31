@@ -2,7 +2,7 @@
 
 namespace splatform.animation;
 internal abstract class Animation {
-    public abstract void OnUpdate(float deltaTime, float speed);
+    public abstract void Update(float deltaTime, float speed);
     public abstract void Reset();
 
     public abstract IntRect GetCurrentSlice(bool mirrored);

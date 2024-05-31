@@ -1,6 +1,4 @@
 ﻿namespace splatform.tiles;
 internal class Block : Tile {
-    private bool _isHidden = false;
-
-
+    public required bool IsHidden { get; init; }
 }

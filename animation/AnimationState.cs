@@ -34,6 +34,6 @@ internal class AnimationState {
     }
 
     public void OnUpdate (float deltaTime, float speed) {
-        _animations[State].OnUpdate(deltaTime, speed);
+        _animations[State].Update(deltaTime, speed);
     }
 }

@@ -48,35 +48,13 @@ internal partial class Tile {
 
         // TODO: Split into methods.
         if (tileType == Behavior.BLOCK) {
-            tile = new Block();
+            tile = ReadNextBlock(reader);
         }
         else if (tileType == Behavior.BACKGROUND) {
             tile = new BackgroundTile();
         }
         else if (tileType == Behavior.QUESTION_BLOCK) {
-            // TODO: Redo this method when question blocks are added.
-            QuestionBlock questionBlock = new();
-            bool isHidden = reader.ReadBoolean();
-            var contentType = (QuestionBlock.ContentType)reader.ReadByte();
-
-            if (contentType == QuestionBlock.ContentType.Entity) {
-                var containedEntity = Entity.ReadNext(reader, false);
-            }
-
-            var hitMode = (QuestionBlock.HitMode)reader.ReadByte();
-
-            if (hitMode == QuestionBlock.HitMode.Times) {
-                int maxHitCount = reader.ReadByte();
-                bool revertToCoin = reader.ReadBoolean();
-            }
-            else if (hitMode == QuestionBlock.HitMode.Seconds) {
-                float hitTimer = reader.ReadSingle();
-                bool persistsUntilHit = reader.ReadBoolean();
-                bool revertToCoin = reader.ReadBoolean();
-            }
-
-            //questionblock.initialize()
-            tile = questionBlock;
+            tile = ReadNextQuestionBlock(reader);
         }
         else if (tileType == Behavior.DONUT_BLOCK) {
             tile = new DonutBlock();
@@ -88,22 +66,7 @@ internal partial class Tile {
             tile = new BreakableBlock();
         }
         else if (tileType == Behavior.PIPE_ORIGIN) {
-            // TODO: Redo this method when pipes are added.
-            PipeOrigin pipe = new();
-
-            bool containsEntity = reader.ReadBoolean();
-            if (containsEntity) {
-                var containedEntity = Entity.ReadNext(reader, false);
-            }
-
-            bool generatesEntity = reader.ReadBoolean();
-            if (generatesEntity) {
-                var generatedEntity = Entity.ReadNext(reader, false);
-            }
-
-            bool containsWarp = reader.ReadBoolean();
-
-            tile = pipe;
+            tile = ReadNextPipeOrigin(reader);
         }
         else if (tileType == Behavior.PIPE_COMPONENT) {
             tile = new PipeComponent();
@@ -197,5 +160,86 @@ internal partial class Tile {
 
             return new DynamicAnimation(slices, sliceSize, frameTimes, frames);
         }
+    }
+
+    private static Block ReadNextBlock (BinaryReader reader) {
+        Block block = new() {
+            IsHidden = false, // todo: parameterize.
+        };
+
+        return block;
+    }
+
+    private static QuestionBlock ReadNextQuestionBlock (BinaryReader reader) {
+        // defaults for properties that may or may not exist.
+        Entity? containedEntity = null;
+        //Tile? containedTile = null;
+        int maxHitCount = 1;
+        bool revertToCoin = false;
+        float hitTimer = 1;
+        bool persistsUntilHit = true;
+
+        bool isHidden = reader.ReadBoolean();
+        var contentType = (QuestionBlock.ContentType)reader.ReadByte();
+
+        if (contentType == QuestionBlock.ContentType.Entity) {
+            containedEntity = Entity.ReadNext(reader, false);
+        }
+
+        var hitMode = (QuestionBlock.HitMode)reader.ReadByte();
+
+        if (hitMode == QuestionBlock.HitMode.Times) {
+            maxHitCount = reader.ReadByte();
+            revertToCoin = reader.ReadBoolean();
+        }
+        else if (hitMode == QuestionBlock.HitMode.Seconds) {
+            hitTimer = reader.ReadSingle();
+            persistsUntilHit = reader.ReadBoolean();
+            revertToCoin = reader.ReadBoolean();
+        }
+
+        QuestionBlock block = new() {
+            IsHidden = isHidden,
+            ContentTypeV = contentType,
+            HitModeV = hitMode,
+            ContainedEntity = containedEntity,
+            ContainedTile = null,
+            MaxHitCount = maxHitCount,
+            RevertToCoin = revertToCoin,
+            HitTimer = hitTimer,
+            PersistsUntilHit = persistsUntilHit,
+        };
+
+        return block;
+    }
+
+    private static PipeOrigin ReadNextPipeOrigin (BinaryReader reader) {
+        // TODO: Check when pipes are added.
+        // defaults for properties that may or may not exist.
+        Entity? containedEntity = null;
+        Entity? generatedEntity = null;
+
+        bool containsEntity = reader.ReadBoolean();
+        if (containsEntity) {
+            containedEntity = Entity.ReadNext(reader, false);
+        }
+
+        bool generatesEntity = reader.ReadBoolean();
+        if (generatesEntity) {
+            generatedEntity = Entity.ReadNext(reader, false);
+        }
+
+        bool containsWarp = reader.ReadBoolean();
+
+        PipeOrigin pipe = new() {
+            ContainsEntity = containsEntity,
+            ContainedEntity = containedEntity,
+            GeneratesEntity = generatesEntity,
+            GeneratedEntity = generatedEntity,
+            MaxGenerationCount = 1, // todo parameterize
+            ContainsWarp = containsWarp,
+        };
+
+        return pipe;
     }
 }

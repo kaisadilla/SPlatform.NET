@@ -22,9 +22,19 @@ internal class Collision {
     /// </summary>
     public required Direction VerticalDirection { get; init; }
     /// <summary>
-    /// A vector representing the overlap between the two colliders.
+    /// The overlap between the two colliders.
     /// </summary>
     public required vec2 Intersection { get; init; }
+
+    #region Helper members
+    /// <summary>
+    /// The overlap, in absolute values, between the two colliders.
+    /// </summary>
+    public vec2 AbsIntersection => new(
+        MathF.Abs(Intersection.X),
+        MathF.Abs(Intersection.Y)
+    );
+    #endregion
 
     /// <summary>
     /// Returns the side of the game object given that was hit by this collision.

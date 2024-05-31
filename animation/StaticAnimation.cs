@@ -10,7 +10,7 @@ internal class StaticAnimation : Animation {
         _frameSliceMirrored = GetMirroredSlice(_frameSlice);
     }
 
-    public override void OnUpdate (float deltaTime, float speed) {
+    public override void Update (float deltaTime, float speed) {
         // nothing
     }
 

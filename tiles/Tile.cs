@@ -2,13 +2,12 @@
 using splatform.animation;
 using splatform.assets;
 using splatform.entities;
+using splatform.game.scenes;
 using splatform.physics;
 
 namespace splatform.tiles;
 internal partial class Tile : IGameObject {
     public GameObjectType Type => GameObjectType.Tile;
-
-    private AnimationState _animations = new();
 
     public vec2 Position { get; private set; }
     public vec2 DrawPosition { get; private set; }
@@ -17,38 +16,16 @@ internal partial class Tile : IGameObject {
 
     public Collider? Collider { get; private set; }
 
+    protected AnimationState _animations = new();
+    protected LevelScene? _level;
+
     public Tile () {
         Sprite.Texture = Assets.TileAtlas;
     }
 
-    public virtual void OnStart () {
-        Sprite.TextureRect = _animations.CurrentAnimation.GetCurrentSlice(false);
-    }
-
-    public virtual void OnUpdate () {
-        _animations.OnUpdate(Time.DeltaTime, Time.TimeScale);
-        Sprite.TextureRect = _animations.CurrentAnimation.GetCurrentSlice(false);
-    }
-
-    public virtual bool HasMobCollided (Collision collision, vec2 mobVelocity) {
-        return true; // TODO
-    }
-
-    /// <summary>
-    /// An event that must be called manually by the Player class when necessary.
-    /// </summary>
-    /// <param name="collision">The collision that triggered this effect.</param>
-    /// <param name="player">The player that triggered this effect.</param>
-    public virtual void OnCollisionWithPlayer (Collision collision, Player player) {
-        // Nothing.
-    }
-
-    /// <summary>
-    /// Draws this tile in the window given.
-    /// </summary>
-    /// <param name="window">The window in which to draw the tile.</param>
-    public void Draw (RenderWindow window) {
-        window.Draw(Sprite);
+    #region Setters
+    public void SetLevel (LevelScene level) {
+        _level = level;
     }
 
     /// <summary>
@@ -82,10 +59,63 @@ internal partial class Tile : IGameObject {
         );
     }
 
-    public void SetDrawPosition (vec2 position) {
-        DrawPosition = position;
+    /// <summary>
+    /// Moves this tile's display position by the vector given.
+    /// </summary>
+    /// <param name="vec">The vector describing the movement.</param>
+    public void SetDrawPosition (vec2 vec) {
+        DrawPosition = vec;
         RecalculateSpritePosition();
     }
+
+    /// <summary>
+    /// Moves this tile's display position by the vector given.
+    /// </summary>
+    public void MoveDrawPosition (int x, int y) {
+        SetDrawPosition(DrawPosition + new vec2(x, y));
+    }
+
+    public void MoveDrawPosition (vec2 vec) {
+        SetDrawPosition(DrawPosition + vec);
+    }
+
+    public void RestartDrawPosition () {
+        SetDrawPosition(Position);
+    }
+    #endregion
+
+    /// <summary>
+    /// Draws this tile in the window given.
+    /// </summary>
+    /// <param name="window">The window in which to draw the tile.</param>
+    public void Draw (RenderWindow window) {
+        window.Draw(Sprite);
+    }
+
+    #region Events
+    // TODO: Split Update() and OnUpdate(), and so on for all methods.
+    public virtual void OnStart () {
+        Sprite.TextureRect = _animations.CurrentAnimation.GetCurrentSlice(false);
+    }
+
+    public virtual void OnUpdate () {
+        _animations.OnUpdate(Time.DeltaTime, Time.TimeScale);
+        Sprite.TextureRect = _animations.CurrentAnimation.GetCurrentSlice(false);
+    }
+
+    public virtual bool HasMobCollided (Collision collision, vec2 mobVelocity) {
+        return true; // TODO
+    }
+    /// <summary>
+    /// An event that must be called manually by the Player class when necessary.
+    /// </summary>
+    /// <param name="collision">The collision that triggered this effect.</param>
+    /// <param name="player">The player that triggered this effect.</param>
+    public virtual void OnCollisionWithPlayer (Collision collision, Player player) {
+        // Nothing.
+    }
+    #endregion
+
 
     /// <summary>
     /// Moves the actual Sprite of this tile to the position in the pixel

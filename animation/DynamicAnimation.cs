@@ -55,7 +55,7 @@ internal class DynamicAnimation : Animation {
         Init(frames, slices, sliceSize);
     }
 
-    public override void OnUpdate (float deltaTime, float speed) {
+    public override void Update (float deltaTime, float speed) {
         _timeSinceLastFrame += deltaTime * speed;
 
         while (_timeSinceLastFrame >= _frameTimes[_currentFrame]) {
