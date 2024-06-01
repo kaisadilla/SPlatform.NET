@@ -21,9 +21,12 @@ public static class Constants {
     #region Paths
     public const string PATH_LEVELS = "res/data/levels";
     public const string PATH_REGISTRY = "res/data/registry.json";
+    public const string PATH_BITFONTS = "res/bitfonts";
+    public const string PATH_BITFONT_SPRITES = "res/sprites/bitfonts";
     public const string PATH_ENTITY_SPRITES = "res/sprites/entities";
     public const string PATH_TILE_SPRITES = "res/sprites/tiles";
     public const string PATH_PARTICLE_SPRITES = "res/sprites/particles";
+    public const string PATH_UI_SPRITES = "res/sprites/ui";
     public const string PATH_BACKGROUND_IMAGES = "res/sprites/backgrounds";
     public const string PATH_MUSIC = "res/music";
     public const string PATH_SOUNDS = "res/sound";

@@ -7,5 +7,5 @@ using System.Threading.Tasks;
 
 namespace splatform.window;
 internal interface IDrawable {
-    public void DrawToWindow(RenderWindow window);
+    public void DrawTo(RenderWindow window);
 }

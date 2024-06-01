@@ -8,9 +8,9 @@ using splatform.window;
 namespace splatform.game;
 
 internal class Game : IDrawable {
-    private Scene _scene;
+    public Scene Scene { get; private set; }
 
-    public GameContext GameContext { get; private set; } = new();
+    public GameContext Context { get; private set; } = new();
 
     public Game () {
 
@@ -19,35 +19,35 @@ internal class Game : IDrawable {
     public void Init (WindowManager windowManager) {
         Listener.GlobalVolume = 50f;
         
-        _scene = LevelScene.FromBinary("level1-1-goomba");
+        Scene = LevelScene.FromBinary("level1-1-goomba");
 
-        _scene.SetWindowSizes((ivec2)windowManager.Window.Size, windowManager.Zoom);
-        _scene.Init(this, windowManager.Window);
-        _scene.Start();
+        Scene.SetWindowSizes((ivec2)windowManager.Window.Size, windowManager.Zoom);
+        Scene.Init(this, windowManager.Window);
+        Scene.Start();
     }
 
     public void Update () {
-        _scene.Update();
+        Scene.Update();
     }
 
     public void FixedUpdate () {
-        _scene.FixedUpdate();
+        Scene.FixedUpdate();
     }
 
     public void LateUpdate () {
-        _scene.LateUpdate();
+        Scene.LateUpdate();
     }
 
     public void End (WindowManager windowManager) {
-        _scene.Close(windowManager.Window);
+        Scene.Close(windowManager.Window);
     }
 
-    public void DrawToWindow (RenderWindow window) {
-        _scene.DrawToWindow(window);
+    public void DrawTo (RenderWindow window) {
+        Scene.DrawToWindow(window);
     }
 
     // TODO: Implement
     private void HandleSceneKeyEvents (object? sender, KeyEventArgs evt) {
-        _scene.ProcessKeyboardEvents(evt);
+        Scene.ProcessKeyboardEvents(evt);
     }
 }

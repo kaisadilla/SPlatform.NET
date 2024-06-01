@@ -76,7 +76,7 @@ internal class WindowManager {
         Window.Clear();
 
         foreach (var drawable in drawables) {
-            drawable.DrawToWindow(Window);
+            drawable.DrawTo(Window);
         }
 
         if (Debug.DisplayStats) {

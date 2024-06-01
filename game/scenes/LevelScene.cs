@@ -169,6 +169,14 @@ internal partial class LevelScene : Scene {
         _particles.Add(particle);
     }
 
+    public void AddCoins (int amount) {
+        _game.Context.Coins += amount;
+    }
+
+    public void AddScore (int amount) {
+        _game.Context.Score += amount;
+    }
+
     private void DeleteDisposedObjects () {
         for (int i = _entities.Count - 1; i >= 0; i--) {
             if (_entities[i].DisposePending) {

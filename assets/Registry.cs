@@ -29,19 +29,6 @@ internal class Registry {
         for (int i = 0; i < TileSprites.Length; i++) {
             TileSpriteIndices[TileSprites[i]] = i;
         }
-
-        //if (json_registry.TryGetValue("backgrounds", out JToken? jBackgrounds)) {
-        //    var val = jBackgrounds.ToObject<string[]>();
-        //
-        //    if (val == null) {
-        //        throw new Exception("Couldn't read backgrounds.");
-        //    }
-        //
-        //    BackgroundImages = val;
-        //}
-        //else {
-        //    throw new Exception("Couldn't read backgrounds");
-        //}
     }
 
     private string ReadRegistry (string path) {

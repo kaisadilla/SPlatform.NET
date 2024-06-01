@@ -143,7 +143,8 @@ internal class Player : Entity {
     }
 
     public void EarnCoin () {
-        // TODO
+        _level.AddCoins(1);
+        _level.AddScore(100);
     }
 
     /// <summary>
