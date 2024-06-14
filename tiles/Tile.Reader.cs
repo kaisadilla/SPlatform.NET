@@ -146,7 +146,7 @@ internal partial class Tile {
         int frameTimesLength = reader.ReadByte();
 
         // frame is a value
-        if (frameTimesLength == 0) {
+        if (frameTimesLength == 0 || frameTimesLength == 1) {
             float frameTime = reader.ReadSingle();
             return new DynamicAnimation(slices, sliceSize, frameTime, frames);
         }
