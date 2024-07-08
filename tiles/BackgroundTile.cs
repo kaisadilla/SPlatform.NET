@@ -1,3 +1,3 @@
 ﻿namespace splatform.tiles;
-internal class BackgroundTile : Tile {
+internal class BackgroundTile : OldTile {
 }

@@ -17,7 +17,7 @@ internal class SuperMushroom : Item {
         StartMovement(_startingDirectionRight, SPEED_X);
     }
 
-    protected override void OnCollisionWithTile (Collision collision, Tile tile) {
+    protected override void OnCollisionWithTile (Collision collision, OldTile tile) {
         WalkAwayFromTile(collision, SPEED_X);
     }
 

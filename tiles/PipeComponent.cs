@@ -1,3 +1,3 @@
 ﻿namespace splatform.tiles;
-internal class PipeComponent : Tile {
+internal class PipeComponent : OldTile {
 }

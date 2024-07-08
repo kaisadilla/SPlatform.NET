@@ -65,4 +65,9 @@ public static class Constants {
     public const float M_RELEASE_DECELERATION = 0x000D0 * B3CONV * B3_TPS;
     public const float M_SKID_DECELERATION = 0x001a0 * B3CONV * B3_TPS;
     #endregion
+    
+    public enum EndianSignature {
+        LITTLE_ENDIAN = 0,
+        BIG_ENDIAN = 1,
+    }
 }

@@ -64,7 +64,7 @@ internal class Koopa : Enemy {
     }
 
     protected override void OnCollisionWithTile (
-        Collision collision, Tile tile
+        Collision collision, OldTile tile
     ) {
         WalkAwayFromTile(collision, _isShell ? SHELL_SPEED : WALKING_SPEED);
     }

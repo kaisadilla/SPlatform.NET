@@ -27,7 +27,7 @@ internal class Goomba : Enemy {
     }
 
     protected override void OnCollisionWithTile (
-        Collision collision, Tile tile
+        Collision collision, OldTile tile
     ) {
         WalkAwayFromTile(collision, WALKING_SPEED);
     }

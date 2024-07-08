@@ -40,7 +40,7 @@ while (windowMgr.IsOpen) {
     }
     #else
     while (_cumulativeFixedTime > SECONDS_PER_FIXED_UPDATE) {
-        FixedUpdate();
+        game.FixedUpdate();
         _cumulativeFixedTime -= SECONDS_PER_FIXED_UPDATE;
     }
     #endif

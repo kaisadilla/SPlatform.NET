@@ -286,7 +286,7 @@ internal abstract partial class Entity : IGameObject {
         SetPosition(new(_position.X + x, _position.Y + y));
     }
 
-    public void CheckCollisionWithTiles (List<Tile> tiles, int startingIndex = 0) {
+    public void CheckCollisionWithTiles (List<OldTile> tiles, int startingIndex = 0) {
         const float COLLISION_THRESHOLD = 1.5f;
 
         if (_ignoresTiles) return;
@@ -367,7 +367,7 @@ internal abstract partial class Entity : IGameObject {
         }
     }
 
-    public bool IsCollisionValid (Collision collision, Tile tile) {
+    public bool IsCollisionValid (Collision collision, OldTile tile) {
         return tile.HasMobCollided(collision, _velocity);
     }
     #endregion
@@ -472,7 +472,7 @@ internal abstract partial class Entity : IGameObject {
         CheckOutOfBounds();
     }
 
-    protected virtual void OnCollisionWithTile (Collision collision, Tile tile) {
+    protected virtual void OnCollisionWithTile (Collision collision, OldTile tile) {
         // Nothing.
     }
 

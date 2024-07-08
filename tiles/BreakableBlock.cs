@@ -1,4 +1,4 @@
 ﻿namespace splatform.tiles;
-internal class BreakableBlock : Tile {
+internal class BreakableBlock : OldTile {
 
 }

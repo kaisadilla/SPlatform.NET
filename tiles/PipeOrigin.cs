@@ -2,7 +2,7 @@
 
 namespace splatform.tiles;
 // TODO: Probably ignore this.
-internal class PipeOrigin : Tile {
+internal class PipeOrigin : OldTile {
     #region Parameters
     public required bool ContainsEntity { get; init; }
     public required Entity? ContainedEntity { get; init; }

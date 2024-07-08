@@ -172,7 +172,7 @@ internal class Player : Entity {
         CheckLevelBoundaries();
     }
 
-    protected override void OnCollisionWithTile (Collision collision, Tile tile) {
+    protected override void OnCollisionWithTile (Collision collision, OldTile tile) {
         if (collision.Direction == Direction.Up) {
             PlayerJumpEnd(true);
         }

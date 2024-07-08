@@ -13,10 +13,10 @@ internal partial class LevelScene : Scene {
 
     private Background _background;
 
-    private List<Tile> _backgroundLayer = new();
-    private List<Tile> _foregroundLayer = new();
-    private List<Tile> _detailLayer = new();
-    private List<Tile> _frontLayer = new();
+    private List<OldTile> _backgroundLayer = new();
+    private List<OldTile> _foregroundLayer = new();
+    private List<OldTile> _detailLayer = new();
+    private List<OldTile> _frontLayer = new();
 
     // TODO: split this into two lists: one with enemies that haven't been
     // spawned yet, and another with active entities. Enemies spawn when
@@ -196,7 +196,7 @@ internal partial class LevelScene : Scene {
     /// </summary>
     /// <param name="window">The window in which to draw each tile.</param>
     /// <param name="layer">The tile layer to draw.</param>
-    private void DrawLayer (RenderWindow window, List<Tile> layer) {
+    private void DrawLayer (RenderWindow window, List<OldTile> layer) {
         foreach (var tile in layer) {
             tile.Draw(window);
         }

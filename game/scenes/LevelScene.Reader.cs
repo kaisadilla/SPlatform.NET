@@ -5,6 +5,35 @@ using System.Diagnostics;
 
 namespace splatform.game.scenes;
 internal partial class LevelScene {
+    public LevelScene (BinaryReader reader, bool ver2) {
+        int[] magicNumbers = [
+            reader.ReadByte(),
+            reader.ReadByte(),
+            reader.ReadByte(),
+            reader.ReadByte(),
+        ];
+
+        int endianSignature = reader.ReadByte();
+        int fileType = reader.ReadByte();
+        int versionMajor = reader.ReadByte();
+        int versionMinor = reader.ReadByte();
+        int versionRevision = reader.ReadByte();
+
+        int width = reader.ReadUInt16();
+        int height = reader.ReadUInt16();
+
+        int background = reader.ReadUInt16();
+        int music = reader.ReadUInt16();
+        int time = reader.ReadUInt16();
+
+        int tileLayerCount = reader.ReadByte();
+
+        List<TileLayer> tileLayers = new(tileLayerCount);
+        for (int i = 0; i < tileLayerCount; i++) {
+            tileLayers.Add(TileLayer.ReadNext(reader));
+        }
+    }
+
     /// <summary>
     /// Creates a LevelScene from the binary data given by the reader.
     /// </summary>
@@ -92,14 +121,14 @@ internal partial class LevelScene {
         //return scene;
     }
 
-    private static List<Tile> ReadLayer (
+    private static List<OldTile> ReadLayer (
         BinaryReader reader, LevelScene level, bool generateColliders
     ) {
         uint tileCount = reader.ReadUInt32();
-        List<Tile> tiles = new();
+        List<OldTile> tiles = new();
 
         for (int i = 0; i < tileCount; i++) {
-            Tile tile = Tile.ReadNext(reader, generateColliders);
+            OldTile tile = OldTile.ReadNext(reader, generateColliders);
             tile.SetLevel(level);
             tiles.Add(tile);
         }
@@ -107,13 +136,13 @@ internal partial class LevelScene {
         return tiles;
     }
 
-    private static List<Tile> ReadJsonLayer (
+    private static List<OldTile> ReadJsonLayer (
         Dictionary<string, string> layer,
         int width,
         int height,
         bool generateColliders
     ) {
-        List<Tile> tiles = new();
+        List<OldTile> tiles = new();
 
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < height; y++) {
@@ -135,7 +164,7 @@ internal partial class LevelScene {
                 //        Assets.TileSize
                 //    )
                 //}; 
-                Tile tile = new(); // TODO: Fix!!!
+                OldTile tile = new(); // TODO: Fix!!!
                 tile.SetGridPosition(new(x, y));
 
                 tiles.Add(tile);

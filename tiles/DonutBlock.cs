@@ -1,3 +1,3 @@
 ﻿namespace splatform.tiles;
-internal class DonutBlock : Tile {
+internal class DonutBlock : OldTile {
 }

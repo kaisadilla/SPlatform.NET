@@ -7,7 +7,7 @@ using splatform.particles;
 using splatform.physics;
 
 namespace splatform.tiles;
-internal class QuestionBlock : Tile {
+internal class QuestionBlock : OldTile {
     #region Constants
     public enum ContentType {
         Coin = 0,
@@ -38,7 +38,7 @@ internal class QuestionBlock : Tile {
     public required HitMode HitModeV { get; init; }
 
     public required Entity? ContainedEntity { get; init; }
-    public required Tile? ContainedTile { get; init; }
+    public required OldTile? ContainedTile { get; init; }
     public required int MaxHitCount { get; init; } = 1;
     public required bool RevertToCoin { get; init; } = false;
     public required float HitTimer { get; init; } = 5f;
